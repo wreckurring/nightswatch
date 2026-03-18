@@ -5,12 +5,14 @@ A production-ready **Spring Boot 3.x microservice** for managing remote co-watch
 ## 🎯 Features
 
 ### Core Functionality
+
 - **Room Management**: Create, retrieve, update, and soft-delete watch rooms
 - **Unique Room Codes**: Auto-generates 6-character alphanumeric codes for room joining
 - **Video Synchronization**: Update currently playing video URL per room
 - **Room Status**: Track active/inactive rooms with timestamps
 
 ### Infrastructure & Observability
+
 - **Redis Caching**: Fast retrieval of active rooms with configurable TTL
 - **PostgreSQL**: Persistent room metadata storage
 - **HTTP Logging**: Automatic request/response logging with duration tracking
@@ -18,26 +20,28 @@ A production-ready **Spring Boot 3.x microservice** for managing remote co-watch
 - **OpenAPI/Swagger**: Full auto-generated API documentation
 
 ### Quality Assurance
+
 - **16 Comprehensive Tests**: Unit tests (Mockito) + Integration tests (MockMvc + H2)
 - **Global Exception Handling**: Structured error responses
 - **Input Validation**: Jakarta Bean Validation annotations
 
 ## 📋 Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Language** | Java 17+ |
-| **Framework** | Spring Boot 3.2.2 |
-| **Build Tool** | Maven |
-| **Database** | PostgreSQL 12+ |
-| **Cache** | Redis 6+ |
-| **API Docs** | OpenAPI 3.0 / Swagger UI |
-| **Metrics** | Micrometer + Prometheus |
-| **Testing** | JUnit 5, Mockito, TestContainers |
+| Layer          | Technology                       |
+| -------------- | -------------------------------- |
+| **Language**   | Java 17+                         |
+| **Framework**  | Spring Boot 3.2.2                |
+| **Build Tool** | Maven                            |
+| **Database**   | PostgreSQL 12+                   |
+| **Cache**      | Redis 6+                         |
+| **API Docs**   | OpenAPI 3.0 / Swagger UI         |
+| **Metrics**    | Micrometer + Prometheus          |
+| **Testing**    | JUnit 5, Mockito, TestContainers |
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Java 17+
 - Maven 3.8+
 - PostgreSQL 12+ running on `localhost:5432`
@@ -58,6 +62,7 @@ mvn spring-boot:run
 ## 📡 REST API Endpoints
 
 ### 1. Create Room
+
 ```bash
 POST /api/v1/rooms
 Content-Type: application/json
@@ -69,6 +74,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "id": "550e8400-e29b-41d4-a716-446655440000",
@@ -81,6 +87,7 @@ Content-Type: application/json
 ```
 
 ### 2. Get Room
+
 ```bash
 GET /api/v1/rooms/{roomCode}
 ```
@@ -88,6 +95,7 @@ GET /api/v1/rooms/{roomCode}
 Returns room details (checks Redis cache first, then PostgreSQL).
 
 ### 3. Update Video URL
+
 ```bash
 PATCH /api/v1/rooms/{roomCode}/video
 Content-Type: application/json
@@ -100,6 +108,7 @@ Content-Type: application/json
 (Only works if room is active)
 
 ### 4. Deactivate Room
+
 ```bash
 DELETE /api/v1/rooms/{roomCode}
 ```
@@ -109,6 +118,7 @@ Soft-deletes by setting `isActive=false`.
 ## 📊 API Documentation
 
 Access Swagger UI:
+
 ```
 http://localhost:8080/api-docs.html
 ```
@@ -116,16 +126,19 @@ http://localhost:8080/api-docs.html
 ## 🔍 Monitoring & Metrics
 
 ### Health Check
+
 ```
 GET /actuator/health
 ```
 
 ### Prometheus Metrics
+
 ```
 GET /actuator/prometheus
 ```
 
 **Available Counters:**
+
 - `room.created` — Number of rooms created
 - `room.cache.hit` — Redis cache hits
 - `room.cache.miss` — Cache misses (fallback to DB)
@@ -135,11 +148,13 @@ GET /actuator/prometheus
 ## 🧪 Testing
 
 ### Run All Tests
+
 ```bash
 mvn test
 ```
 
 ### Unit Tests (8 tests)
+
 - Service layer logic (create, read, update, deactivate)
 - Cache behavior (hit/miss)
 - Exception handling
@@ -149,6 +164,7 @@ mvn test -Dtest=RoomServiceImplTest
 ```
 
 ### Integration Tests (8 tests)
+
 - Full REST API endpoints
 - HTTP status codes
 - Database persistence
@@ -163,6 +179,7 @@ mvn test -Dtest=RoomControllerIntegrationTest
 ## ⚙️ Configuration
 
 ### application.yml (Production)
+
 ```yaml
 spring:
   datasource:
@@ -186,6 +203,7 @@ room-service:
 ```
 
 ### application-test.yml (Testing)
+
 ```yaml
 spring:
   datasource:
@@ -275,12 +293,14 @@ All exceptions return structured JSON:
 ```
 
 **Custom Exceptions:**
+
 - `RoomNotFoundException` (404)
 - `RoomInactiveException` (400)
 
 ## 🐳 Docker Support (Optional)
 
 Build Docker image:
+
 ```bash
 mvn clean package -DskipTests
 docker build -t nightswatch-room-service:1.0 .
@@ -292,9 +312,9 @@ docker run -p 8080:8080 \
 
 ## 📝 Commit History
 
-| Commit | Message |
-|--------|---------|
-| fcc2676 | feat: add core room service domain layer and REST API |
+| Commit  | Message                                                         |
+| ------- | --------------------------------------------------------------- |
+| fcc2676 | feat: add core room service domain layer and REST API           |
 | 5a6b88e | feat: add redis caching, logging interceptor, and configuration |
 | bcb9803 | test: add comprehensive unit and integration tests with metrics |
 
