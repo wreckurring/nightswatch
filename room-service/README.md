@@ -1,8 +1,8 @@
 # NightsWatch Room Service
 
-A production-ready **Spring Boot 3.x microservice** for managing remote co-watching rooms. Part of the NightsWatch distributed application.
+A production-ready **Spring Boot microservice** for managing remote co-watching rooms. Part of the NightsWatch distributed application.
 
-## 🎯 Features
+## Features
 
 ### Core Functionality
 
@@ -25,7 +25,7 @@ A production-ready **Spring Boot 3.x microservice** for managing remote co-watch
 - **Global Exception Handling**: Structured error responses
 - **Input Validation**: Jakarta Bean Validation annotations
 
-## 📋 Tech Stack
+## Tech Stack
 
 | Layer          | Technology                       |
 | -------------- | -------------------------------- |
@@ -38,7 +38,7 @@ A production-ready **Spring Boot 3.x microservice** for managing remote co-watch
 | **Metrics**    | Micrometer + Prometheus          |
 | **Testing**    | JUnit 5, Mockito, TestContainers |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ mvn spring-boot:run
 
 **Server starts on:** `http://localhost:8080`
 
-## 📡 REST API Endpoints
+## REST API Endpoints
 
 ### 1. Create Room
 
@@ -115,7 +115,7 @@ DELETE /api/v1/rooms/{roomCode}
 
 Soft-deletes by setting `isActive=false`.
 
-## 📊 API Documentation
+## API Documentation
 
 Access Swagger UI:
 
@@ -123,7 +123,7 @@ Access Swagger UI:
 http://localhost:8080/api-docs.html
 ```
 
-## 🔍 Monitoring & Metrics
+## Monitoring & Metrics
 
 ### Health Check
 
@@ -145,7 +145,7 @@ GET /actuator/prometheus
 - `room.video.updated` — Video URL updates
 - `room.deactivated` — Rooms deactivated
 
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 
@@ -176,7 +176,7 @@ mvn test -Dtest=RoomControllerIntegrationTest
 
 **Test Database:** H2 in-memory (auto-configured via `application-test.yml`)
 
-## ⚙️ Configuration
+## Configuration
 
 ### application.yml (Production)
 
@@ -213,7 +213,7 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nightswatch/
@@ -260,7 +260,7 @@ nightswatch/
 └── README.md
 ```
 
-## 🔄 Architecture Pattern
+## Architecture Pattern
 
 **Controller → Service → Repository**
 
@@ -278,7 +278,7 @@ RoomRepository (PostgreSQL)
 Database
 ```
 
-## 🔒 Exception Handling
+## Exception Handling
 
 All exceptions return structured JSON:
 
@@ -297,47 +297,10 @@ All exceptions return structured JSON:
 - `RoomNotFoundException` (404)
 - `RoomInactiveException` (400)
 
-## 🐳 Docker Support (Optional)
+## License
 
-Build Docker image:
-
-```bash
-mvn clean package -DskipTests
-docker build -t nightswatch-room-service:1.0 .
-docker run -p 8080:8080 \
-  -e SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/roomdb \
-  -e SPRING_REDIS_HOST=redis \
-  nightswatch-room-service:1.0
-```
-
-## 📝 Commit History
-
-| Commit  | Message                                                         |
-| ------- | --------------------------------------------------------------- |
-| fcc2676 | feat: add core room service domain layer and REST API           |
-| 5a6b88e | feat: add redis caching, logging interceptor, and configuration |
-| bcb9803 | test: add comprehensive unit and integration tests with metrics |
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -am 'feat: add feature'`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👨‍💻 Author
-
-**NightsWatch Development Team**
-
-## 📧 Support
-
-For issues or questions, please open a GitHub issue.
+MIT License
 
 ---
 
-**Built with ❤️ for remote co-watching experiences**
+**Built with ❤️ and </> by MkR**
