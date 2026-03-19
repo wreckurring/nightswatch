@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.nightswatch</groupId>
-		<artifactId>nightswatch</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-	</parent>
+        <groupId>com.nightswatch</groupId>
+        <artifactId>nightswatch-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
 	<artifactId>sync-service</artifactId>
 	<name>Sync Service</name>
