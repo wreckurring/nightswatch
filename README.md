@@ -2,29 +2,14 @@
 
 A distributed **Remote Co-Watching Application** built with microservices architecture. Real-time synchronized video playback and user presence across multiple concurrent viewing sessions.
 
-## 🎯 Overview
-
-NightsWatch is a modern cloud-native application that enables groups of users to watch videos together in real-time with:
-
-- Synchronized playback (play, pause, seek)
-- Live user presence tracking
-- Stateless WebSocket communication
-- Scalable microservice architecture
-
-## 📦 Microservices
+## Microservices
 
 ### 1. Room Service (`room-service`)
 
 Manages watch room metadata, persistence, and caching.
 
 - **Port:** 8080
-- **Core Features:**
-  - Room creation with unique codes
-  - Video URL management
-  - Room lifecycle (active/inactive)
-  - Redis caching layer
-  - PostgreSQL persistence
-- **Technology:** Spring Boot 3.x, JPA, Redis, PostgreSQL
+- **Technology:** Spring Boot, JPA, Redis, PostgreSQL
 
 [→ View Room Service Docs](./room-service/README.md)
 
@@ -33,36 +18,21 @@ Manages watch room metadata, persistence, and caching.
 Handles real-time WebSocket synchronization for video playback and user presence.
 
 - **Port:** 8081
-- **Core Features:**
-  - STOMP-based messaging
-  - Playback synchronization (play, pause, seek, buffering)
-  - User presence tracking (joined/left)
-  - SockJS fallback support
-  - Stateless architecture
-- **Technology:** Spring Boot 3.x, WebSocket, STOMP, SockJS
+- **Technology:** Spring Boot, WebSocket, STOMP, SockJS
 
 [→ View Sync Service Docs](./sync-service/README.md)
 
-## 📋 Tech Stack
+## Tech Stack
 
 | Component      | Technology               |
 | -------------- | ------------------------ |
-| **Language**   | Java 17+                 |
-| **Framework**  | Spring Boot 3.x          |
-| **Build Tool** | Maven                    |
+| **Language**   | Java                     |
+| **Framework**  | Spring Boot              |
 | **Messaging**  | WebSocket, STOMP, SockJS |
-| **Cache**      | Redis 6+                 |
-| **Database**   | PostgreSQL 12+           |
-| **API Docs**   | OpenAPI 3.0 / Swagger UI |
+| **Cache**      | Redis                    |
+| **Database**   | PostgreSQL               |
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Java 17+
-- Maven 3.8+
-- PostgreSQL 12+ (for room-service)
-- Redis 6+ (for room-service)
+## Quick Start
 
 ### Installation
 
@@ -84,34 +54,34 @@ mvn spring-boot:run -pl sync-service
 - Room Service: `http://localhost:8080`
 - Sync Service WebSocket: `ws://localhost:8081/api/ws-sync`
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
 │                    Client (Browser)                 │
 │                                                     │
-│  ┌──────────────┐        ┌──────────────────┐     │
-│  │ REST Client  │──────▶ │  Room Service    │     │
-│  └──────────────┘        │  (8080)          │     │
-│         │                │                  │     │
-│         │                │ - Room CRUD      │     │
-│  ┌──────┴──────────┐     │ - Video URL      │     │
-│  │  WebSocket      │     │ - Redis Cache    │     │
-│  │  Client         │     │ - PostgreSQL     │     │
-│  └──────┬──────────┘     └──────────────────┘     │
-│         │                                          │
-│         │       ┌──────────────────────┐          │
-│         └──────▶│  Sync Service (8081) │          │
-│                 │                      │          │
-│                 │ - Video Sync         │          │
-│                 │ - Presence Tracking  │          │
-│                 │ - STOMP Messaging    │          │
-│                 │ - SockJS Fallback    │          │
-│                 └──────────────────────┘          │
+│  ┌──────────────┐        ┌──────────────────┐       │
+│  │ REST Client  │──────> │  Room Service    │       │
+│  └──────────────┘        │  (8080)          │       │
+│         │                │                  │       │
+│         │                │ - Room CRUD      │       │
+│  ┌──────┴──────────┐     │ - Video URL      │       │
+│  │  WebSocket      │     │ - Redis Cache    │       │
+│  │  Client         │     │ - PostgreSQL     │       │
+│  └──────┬──────────┘     └──────────────────┘       │
+│         │                                           │
+│         │       ┌──────────────────────┐            │
+│         └──────>│  Sync Service (8081) │            │
+│                 │                      │            │
+│                 │ - Video Sync         │            │
+│                 │ - Presence Tracking  │            │
+│                 │ - STOMP Messaging    │            │
+│                 │ - SockJS Fallback    │            │
+│                 └──────────────────────┘            │
 └─────────────────────────────────────────────────────┘
 ```
 
-## 📁 Monorepo Structure
+## Monorepo Structure
 
 ```
 nightswatch/
@@ -124,10 +94,10 @@ nightswatch/
 │   ├── pom.xml
 │   └── README.md
 ├── pom.xml                 (Parent POM)
-└── README.md               (This file)
+└── README.md
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 
@@ -142,7 +112,7 @@ mvn test -pl room-service
 mvn test -pl sync-service
 ```
 
-## 📊 API Documentation
+## API Documentation
 
 ### Room Service Swagger UI
 
@@ -154,7 +124,7 @@ http://localhost:8080/api-docs.html
 
 STOMP endpoints available at: `/ws-sync`
 
-## 🔄 Data Flow Example
+## Data Flow Example
 
 1. **User A creates room:**
    - REST: `POST /api/v1/rooms` → Room Service
@@ -171,7 +141,7 @@ STOMP endpoints available at: `/ws-sync`
 4. **Users sync in real-time:**
    - All subscribers receive playback updates instantly
 
-## 📝 Environment Configuration
+## Environment Configuration
 
 ### application.yml (Room Service)
 
@@ -194,33 +164,10 @@ spring:
     name: sync-service
 ```
 
-## 🐳 Docker Support (Optional)
+## License
 
-```bash
-mvn clean package -DskipTests
-docker-compose up
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -am 'feat: add feature'`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👨‍💻 Author
-
-**NightsWatch Development Team**
-
-## 📧 Support
-
-For issues or questions, please open a GitHub issue.
+MIT License
 
 ---
 
-**Built with ❤️ for remote co-watching experiences**
+**Built with ❤️ & </> by MkR.**
