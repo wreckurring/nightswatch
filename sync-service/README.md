@@ -1,8 +1,8 @@
 # NightsWatch Sync Service
 
-A production-ready **Spring Boot 3.x microservice** for real-time WebSocket synchronization in the NightsWatch distributed co-watching application.
+A production-ready **Spring Boot microservice** for real-time WebSocket synchronization in the NightsWatch distributed co-watching application.
 
-## 🎯 Features
+## Features
 
 ### Core Functionality
 
@@ -19,13 +19,7 @@ A production-ready **Spring Boot 3.x microservice** for real-time WebSocket sync
 - **Message Routing**: Client-to-server route via `/app` prefix, broadcasts via `/topic` prefix
 - **Zero Database Dependency**: Pure in-memory real-time messaging
 
-### Quality Assurance
-
-- **Type-Safe DTOs**: Lombok-enhanced data transfer objects
-- **Enumerated Actions**: Strongly-typed sync actions (PLAY, PAUSE, SEEK, BUFFERING)
-- **Structured Messages**: JSON serialization via Jackson
-
-## 📋 Tech Stack
+## Tech Stack
 
 | Layer          | Technology               |
 | -------------- | ------------------------ |
@@ -37,12 +31,7 @@ A production-ready **Spring Boot 3.x microservice** for real-time WebSocket sync
 | **Utilities**  | Lombok                   |
 | **Testing**    | JUnit 5                  |
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Java 17+
-- Maven 3.8+
+## Quick Start
 
 ### Installation & Run
 
@@ -57,7 +46,7 @@ mvn spring-boot:run -pl sync-service
 **Server starts on:** `http://localhost:8081`
 **WebSocket endpoint:** `ws://localhost:8081/api/ws-sync`
 
-## 📡 WebSocket API
+## WebSocket API
 
 ### Connect to Sync Service
 
@@ -68,12 +57,10 @@ const stompClient = Stomp.over(socket);
 stompClient.connect({}, function (frame) {
   console.log("Connected: " + frame.command);
 
-  // Subscribe to room-specific sync messages
   stompClient.subscribe("/topic/room/ABC123/sync", function (message) {
     console.log("Sync message: " + message.body);
   });
 
-  // Subscribe to presence messages
   stompClient.subscribe("/topic/room/ABC123/presence", function (message) {
     console.log("Presence: " + message.body);
   });
@@ -125,7 +112,7 @@ Send presence messages to `/app/room/{roomCode}/presence`
 - `JOINED` — User entered the room
 - `LEFT` — User left the room
 
-## 🔄 STOMP Message Flow
+## STOMP Message Flow
 
 ```
 Client                          Sync Service                 Broadcast
@@ -142,16 +129,7 @@ Client                          Sync Service                 Broadcast
   │                                  │                           │
 ```
 
-## 📊 API Documentation
-
-WebSocket STOMP endpoints are self-documenting. Use any STOMP client (JavaScript, Java, Python) to connect.
-
-**Available Endpoints:**
-
-- `POST /app/room/{roomCode}/sync` → `/topic/room/{roomCode}/sync`
-- `POST /app/room/{roomCode}/presence` → `/topic/room/{roomCode}/presence`
-
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 
@@ -161,7 +139,7 @@ mvn test
 
 **Test Database:** In-memory (no external dependencies required)
 
-## ⚙️ Configuration
+## Configuration
 
 ### application.yml (Production)
 
@@ -181,7 +159,7 @@ logging:
     com.nightswatch.syncservice: DEBUG
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nightswatch/sync-service/
@@ -209,7 +187,7 @@ nightswatch/sync-service/
 └── README.md
 ```
 
-## 🔄 Architecture Pattern
+## Architecture Pattern
 
 **Stateless Event-Driven Architecture**
 
@@ -225,16 +203,16 @@ Message Broker (in-memory)
 All Subscribed Clients → Broadcast
 ```
 
-## 🔒 Exception Handling
+## Exception Handling
 
 All exceptions are logged and gracefully handled by Spring Framework. WebSocket connections are resilient with automatic reconnection support via SockJS.
 
-## 🌐 CORS & Security
+## CORS & Security
 
 **Current Configuration:**
 
 ```java
-setAllowedOriginPatterns("*")  // Development mode
+setAllowedOriginPatterns("*")
 ```
 
 **For Production:**
@@ -244,7 +222,7 @@ Replace with specific allowed origins:
 setAllowedOrigins("https://yourdomain.com")
 ```
 
-## 🚀 Scalability
+## Scalability
 
 This service is **stateless** and can be scaled horizontally:
 
@@ -261,43 +239,11 @@ config.enableStompBrokerRelay("/topic")
     .setRelayPort(61613);
 ```
 
-## 🐳 Docker Support (Optional)
 
-Build Docker image:
+## License
 
-```bash
-mvn clean package -DskipTests
-docker build -t nightswatch-sync-service:1.0 .
-docker run -p 8081:8081 nightswatch-sync-service:1.0
-```
-
-## 📝 Commit History
-
-| Commit  | Message                                                                                     |
-| ------- | ------------------------------------------------------------------------------------------- |
-| 0d15b69 | Phase 3-7: Add WebSocket config, event listener, VideoSyncController, and application setup |
-| eb0e785 | Phase 1-2: Add pom.xml and DTOs (SyncMessage, PresenceMessage, enums)                       |
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit changes (`git commit -am 'feat: add feature'`)
-4. Push to branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👨‍💻 Author
-
-**NightsWatch Development Team**
-
-## 📧 Support
-
-For issues or questions, please open a GitHub issue.
+MIT License 
 
 ---
 
-**Built with ❤️ for remote co-watching experiences**
+**Built with ❤️ and </> by MkR**
