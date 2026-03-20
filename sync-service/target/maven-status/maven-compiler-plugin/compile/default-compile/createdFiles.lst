@@ -1,0 +1,8 @@
+com\nightswatch\syncservice\dto\SyncMessage.class
+com\nightswatch\syncservice\dto\PresenceType.class
+com\nightswatch\syncservice\SyncServiceApplication.class
+com\nightswatch\syncservice\dto\SyncAction.class
+com\nightswatch\syncservice\controller\VideoSyncController.class
+com\nightswatch\syncservice\listener\WebSocketEventListener.class
+com\nightswatch\syncservice\dto\PresenceMessage.class
+com\nightswatch\syncservice\config\WebSocketConfig.class
