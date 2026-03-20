@@ -227,37 +227,6 @@ sync-service:
 
 **Prerequisites:** RabbitMQ with STOMP plugin enabled (default port 61613)
 
-### Docker Compose Example
-
-```yaml
-version: "3.8"
-services:
-  rabbitmq:
-    image: rabbitmq:3.12-management
-    ports:
-      - "5672:5672"
-      - "61613:61613"
-      - "15672:15672"
-    command: bash -c "rabbitmq-plugins enable rabbitmq_stomp && rabbitmq-server"
-
-  sync-service-1:
-    image: nightswatch-sync-service:latest
-    ports:
-      - "8081:8081"
-    environment:
-      SYNC_SERVICE_BROKER_TYPE: relay
-      SYNC_SERVICE_BROKER_RELAY_HOST: rabbitmq
-
-  sync-service-2:
-    image: nightswatch-sync-service:latest
-    ports:
-      - "8082:8081"
-    environment:
-      SYNC_SERVICE_BROKER_TYPE: relay
-      SYNC_SERVICE_BROKER_RELAY_HOST: rabbitmq
-    depends_on:
-      - rabbitmq
-```
 
 ### Architecture Diagram
 
