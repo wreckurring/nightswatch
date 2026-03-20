@@ -13,3 +13,11 @@ logging:
   level:
     root: INFO
     com.nightswatch.syncservice: DEBUG
+
+sync-service:
+  broker:
+    type: simple
+    relay-host: localhost
+    relay-port: 61613
+    relay-login: guest
+    relay-password: guest

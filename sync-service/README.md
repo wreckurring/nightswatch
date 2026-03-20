@@ -129,16 +129,6 @@ Client                          Sync Service                 Broadcast
   │                                  │                           │
 ```
 
-## Testing
-
-### Run All Tests
-
-```bash
-mvn test
-```
-
-**Test Database:** In-memory (no external dependencies required)
-
 ## Configuration
 
 ### application.yml (Production)
@@ -203,46 +193,91 @@ Message Broker (in-memory)
 All Subscribed Clients → Broadcast
 ```
 
-## Exception Handling
-
-All exceptions are logged and gracefully handled by Spring Framework. WebSocket connections are resilient with automatic reconnection support via SockJS.
-
-## CORS & Security
-
-**Current Configuration:**
-
-```java
-setAllowedOriginPatterns("*")
-```
-
-**For Production:**
-Replace with specific allowed origins:
-
-```java
-setAllowedOrigins("https://yourdomain.com")
-```
-
 ## Scalability
 
 This service is **stateless** and can be scaled horizontally:
 
 - Multiple instances can run in parallel
 - Load balance WebSocket connections across instances
-- Message broker is configured per instance (in production, use external broker like RabbitMQ or Apache ActiveMQ)
+- Message broker is configurable per deployment
 
-**Future Enhancement:**
-Replace `enableSimpleBroker()` with `enableStompBrokerRelay()` for distributed deployments:
+### Single-Instance Mode (Development)
 
-```java
-config.enableStompBrokerRelay("/topic")
-    .setRelayHost("rabbitmq-host")
-    .setRelayPort(61613);
+**Default configuration** uses in-memory SimpleBroker:
+
+```yaml
+sync-service:
+  broker:
+    type: simple
 ```
 
+### Distributed Mode (Production)
+
+For distributing messages across multiple instances, configure STOMP Broker Relay with RabbitMQ:
+
+```yaml
+sync-service:
+  broker:
+    type: relay
+    relay-host: rabbitmq.example.com
+    relay-port: 61613
+    relay-login: guest
+    relay-password: guest
+```
+
+**Prerequisites:** RabbitMQ with STOMP plugin enabled (default port 61613)
+
+### Docker Compose Example
+
+```yaml
+version: "3.8"
+services:
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    ports:
+      - "5672:5672"
+      - "61613:61613"
+      - "15672:15672"
+    command: bash -c "rabbitmq-plugins enable rabbitmq_stomp && rabbitmq-server"
+
+  sync-service-1:
+    image: nightswatch-sync-service:latest
+    ports:
+      - "8081:8081"
+    environment:
+      SYNC_SERVICE_BROKER_TYPE: relay
+      SYNC_SERVICE_BROKER_RELAY_HOST: rabbitmq
+
+  sync-service-2:
+    image: nightswatch-sync-service:latest
+    ports:
+      - "8082:8081"
+    environment:
+      SYNC_SERVICE_BROKER_TYPE: relay
+      SYNC_SERVICE_BROKER_RELAY_HOST: rabbitmq
+    depends_on:
+      - rabbitmq
+```
+
+### Architecture Diagram
+
+```
+Client 1 ──┐
+Client 2 ──┼──────► Load Balancer ──┬──────► Instance 1 (8081)
+Client 3 ──┤                        │
+Client 4 ──┤                        ├──────► Instance 2 (8082)
+           │                        │
+           └──────────────────────┬─┴──────► Instance N
+                                  │
+                        STOMP Broker Relay
+                                  │
+                              RabbitMQ
+                           (STOMP: 61613)
+```
 
 ## License
 
-MIT License 
+MIT License
 
 ---
 
