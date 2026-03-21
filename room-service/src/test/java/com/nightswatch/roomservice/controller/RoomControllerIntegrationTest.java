@@ -1,22 +1,29 @@
 package com.nightswatch.roomservice.controller;
 
 import com.nightswatch.roomservice.dto.CreateRoomRequest;
+import com.nightswatch.roomservice.dto.RoomResponseDTO;
 import com.nightswatch.roomservice.dto.UpdateRoomVideoRequest;
 import com.nightswatch.roomservice.entity.Room;
 import com.nightswatch.roomservice.repository.RoomRepository;
+import com.nightswatch.roomservice.store.RoomCacheService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.Instant;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,15 +42,15 @@ class RoomControllerIntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Autowired(required = false)
-    private RedisTemplate<?> redisTemplate;
+    @MockBean
+    private RoomCacheService roomCacheService;
 
     @BeforeEach
     void setUp() {
         roomRepository.deleteAll();
-        if (redisTemplate != null) {
-            redisTemplate.getConnectionFactory().getConnection().flushAll();
-        }
+        when(roomCacheService.get(anyString())).thenReturn(Optional.empty());
+        doNothing().when(roomCacheService).put(any(RoomResponseDTO.class));
+        doNothing().when(roomCacheService).evict(anyString());
     }
 
     @Test
@@ -60,7 +67,7 @@ class RoomControllerIntegrationTest {
                 .andExpect(jsonPath("$.roomCode", notNullValue()))
                 .andExpect(jsonPath("$.hostId", is("user123")))
                 .andExpect(jsonPath("$.currentVideoUrl", is("http://example.com/video.mp4")))
-                .andExpect(jsonPath("$.isActive", is(true)));
+                .andExpect(jsonPath("$.active", is(true)));
     }
 
     @Test
@@ -92,7 +99,7 @@ class RoomControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.roomCode", is("ABC123")))
                 .andExpect(jsonPath("$.hostId", is("user123")))
-                .andExpect(jsonPath("$.isActive", is(true)));
+                .andExpect(jsonPath("$.active", is(true)));
     }
 
     @Test

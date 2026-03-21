@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: room-service
+          uri: ${services.room-service.uri:http://localhost:8080}
+          predicates:
+            - Path=/api/v1/rooms/**,/api-docs.html,/v3/api-docs/**
+        - id: sync-service-http
+          uri: ${services.sync-service.http-uri:http://localhost:8081}
+          predicates:
+            - Path=/api/ws-sync/**
+        - id: sync-service-websocket
+          uri: ${services.sync-service.ws-uri:ws://localhost:8081}
+          predicates:
+            - Path=/api/ws-sync/**
+            - Header=Upgrade, WebSocket
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, gateway

@@ -18,17 +18,17 @@ public class RoomCacheService {
 
     private final RedisTemplate<String, RoomResponseDTO> redisTemplate;
 
-    private final ValueOperations<String, RoomResponseDTO> valueOps;
-
     @Value("${room-service.cache.ttl-seconds:0}")
     private long ttlSeconds;
 
     public Optional<RoomResponseDTO> get(String roomCode) {
+        ValueOperations<String, RoomResponseDTO> valueOps = redisTemplate.opsForValue();
         return Optional.ofNullable(valueOps.get(getKey(roomCode)));
     }
 
     public void put(RoomResponseDTO room) {
         String key = getKey(room.getRoomCode());
+        ValueOperations<String, RoomResponseDTO> valueOps = redisTemplate.opsForValue();
         if (ttlSeconds > 0) {
             valueOps.set(key, room, Duration.ofSeconds(ttlSeconds));
         } else {
