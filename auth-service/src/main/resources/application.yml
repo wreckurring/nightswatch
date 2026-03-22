@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  swagger-ui:
+    enabled: true
+    path: /auth-docs.html
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+auth:
+  jwt:
+    secret: c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==
+    expiration-seconds: 3600
