@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="16.605" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.nightswatch.authservice.controller.AuthControllerIntegrationTest" time="16.517" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\Github-Projects\nightswatch\room-service\target\test-classes;D:\Github-Projects\nightswatch\room-service\target\classes;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.2\spring-boot-starter-web-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.2\spring-boot-starter-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot\3.2.2\spring-boot-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.2\spring-boot-starter-logging-3.2.2.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\slf4j\jul-to-slf4j\2.0.11\jul-to-slf4j-2.0.11.jar;C:\Users\Rohit\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Rohit\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.2\spring-boot-starter-json-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.2\spring-boot-starter-tomcat-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.18\tomcat-embed-core-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.18\tomcat-embed-websocket-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-web\6.1.3\spring-web-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-beans\6.1.3\spring-beans-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-webmvc\6.1.3\spring-webmvc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aop\6.1.3\spring-aop-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context\6.1.3\spring-context-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-expression\6.1.3\spring-expression-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.2\spring-boot-starter-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.2\spring-boot-starter-aop-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.2\spring-boot-starter-jdbc-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jdbc\6.1.3\spring-jdbc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\hibernate\orm\hibernate-core\6.4.1.Final\hibernate-core-6.4.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Rohit\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Rohit\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Rohit\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Rohit\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Rohit\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-jpa\3.2.2\spring-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-commons\3.2.2\spring-data-commons-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-orm\6.1.3\spring-orm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-tx\6.1.3\spring-tx-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aspects\6.1.3\spring-aspects-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Rohit\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.2.2\spring-boot-starter-data-redis-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\lettuce\lettuce-core\6.3.1.RELEASE\lettuce-core-6.3.1.RELEASE.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-common\4.1.105.Final\netty-common-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-handler\4.1.105.Final\netty-handler-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-resolver\4.1.105.Final\netty-resolver-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-buffer\4.1.105.Final\netty-buffer-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.105.Final\netty-transport-native-unix-common-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-codec\4.1.105.Final\netty-codec-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-transport\4.1.105.Final\netty-transport-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\projectreactor\reactor-core\3.6.2\reactor-core-3.6.2.jar;C:\Users\Rohit\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-redis\3.2.2\spring-data-redis-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-keyvalue\3.2.2\spring-data-keyvalue-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-oxm\6.1.3\spring-oxm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context-support\6.1.3\spring-context-support-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.2\spring-boot-starter-validation-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.18\tomcat-embed-el-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Rohit\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.2.2\spring-boot-starter-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.2.2\spring-boot-actuator-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator\3.2.2\spring-boot-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-observation\1.12.2\micrometer-observation-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-commons\1.12.2\micrometer-commons-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-jakarta9\1.12.2\micrometer-jakarta9-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-registry-prometheus\1.12.2\micrometer-registry-prometheus-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-core\1.12.2\micrometer-core-1.12.2.jar;C:\Users\Rohit\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\Rohit\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_common\0.16.0\simpleclient_common-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient\0.16.0\simpleclient-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_otel\0.16.0\simpleclient_tracer_otel-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_common\0.16.0\simpleclient_tracer_common-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_otel_agent\0.16.0\simpleclient_tracer_otel_agent-0.16.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.2\spring-boot-starter-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test\3.2.2\spring-boot-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.2\spring-boot-test-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\Rohit\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Rohit\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Rohit\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Rohit\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Rohit\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Rohit\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Rohit\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-core\6.1.3\spring-core-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jcl\6.1.3\spring-jcl-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-test\6.1.3\spring-test-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Rohit\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-testcontainers\3.2.2\spring-boot-testcontainers-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.2\spring-boot-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\postgresql\1.19.3\postgresql-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\Rohit\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Rohit\.m2\repository\org\slf4j\slf4j-api\2.0.11\slf4j-api-2.0.11.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Rohit\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Rohit\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\Rohit\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\rest-assured\5.3.2\rest-assured-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy\4.0.17\groovy-4.0.17.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy-xml\4.0.17\groovy-xml-4.0.17.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\Rohit\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Rohit\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Rohit\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\json-path\5.3.2\json-path-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy-json\4.0.17\groovy-json-4.0.17.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\rest-assured-common\5.3.2\rest-assured-common-5.3.2.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\xml-path\5.3.2\xml-path-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;"/>
+    <property name="java.class.path" value="D:\Github-Projects\nightswatch\auth-service\target\test-classes;D:\Github-Projects\nightswatch\auth-service\target\classes;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.2\spring-boot-starter-web-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.2\spring-boot-starter-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot\3.2.2\spring-boot-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.2\spring-boot-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.2\spring-boot-starter-logging-3.2.2.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\slf4j\jul-to-slf4j\2.0.11\jul-to-slf4j-2.0.11.jar;C:\Users\Rohit\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Rohit\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.2\spring-boot-starter-json-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.2\spring-boot-starter-tomcat-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.18\tomcat-embed-core-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.18\tomcat-embed-websocket-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-web\6.1.3\spring-web-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-beans\6.1.3\spring-beans-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-webmvc\6.1.3\spring-webmvc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context\6.1.3\spring-context-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-expression\6.1.3\spring-expression-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.2\spring-boot-starter-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.2\spring-boot-starter-aop-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.2\spring-boot-starter-jdbc-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jdbc\6.1.3\spring-jdbc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\hibernate\orm\hibernate-core\6.4.1.Final\hibernate-core-6.4.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Rohit\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Rohit\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Rohit\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Rohit\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Rohit\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-jpa\3.2.2\spring-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-commons\3.2.2\spring-data-commons-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-orm\6.1.3\spring-orm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-tx\6.1.3\spring-tx-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\slf4j\slf4j-api\2.0.11\slf4j-api-2.0.11.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aspects\6.1.3\spring-aspects-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.2\spring-boot-starter-security-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aop\6.1.3\spring-aop-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-config\6.2.1\spring-security-config-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-core\6.2.1\spring-security-core-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-crypto\6.2.1\spring-security-crypto-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-web\6.2.1\spring-security-web-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.2\spring-boot-starter-validation-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.18\tomcat-embed-el-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Rohit\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Rohit\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.5\jjwt-api-0.12.5.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.5\jjwt-impl-0.12.5.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.5\jjwt-jackson-0.12.5.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.2.2\spring-boot-starter-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.2.2\spring-boot-actuator-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator\3.2.2\spring-boot-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-observation\1.12.2\micrometer-observation-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-commons\1.12.2\micrometer-commons-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-jakarta9\1.12.2\micrometer-jakarta9-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-core\1.12.2\micrometer-core-1.12.2.jar;C:\Users\Rohit\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\Rohit\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Rohit\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Rohit\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.2\spring-boot-starter-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test\3.2.2\spring-boot-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.2\spring-boot-test-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\Rohit\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Rohit\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Rohit\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Rohit\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Rohit\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Rohit\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Rohit\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-core\6.1.3\spring-core-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jcl\6.1.3\spring-jcl-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-test\6.1.3\spring-test-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -16,9 +16,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rohit\AppData\Local\Temp\surefire1804370190329184741\surefirebooter-20260322223653562_9.jar C:\Users\Rohit\AppData\Local\Temp\surefire1804370190329184741 2026-03-22T22-36-28_935-jvmRun1 surefire-20260322223653562_7tmp surefire_1-20260322223653562_8tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rohit\AppData\Local\Temp\surefire14296395039807210725\surefirebooter-20260322223634253_3.jar C:\Users\Rohit\AppData\Local\Temp\surefire14296395039807210725 2026-03-22T22-36-28_935-jvmRun1 surefire-20260322223634253_1tmp surefire_0-20260322223634253_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\Github-Projects\nightswatch\room-service\target\test-classes;D:\Github-Projects\nightswatch\room-service\target\classes;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.2\spring-boot-starter-web-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.2\spring-boot-starter-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot\3.2.2\spring-boot-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.2\spring-boot-starter-logging-3.2.2.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\slf4j\jul-to-slf4j\2.0.11\jul-to-slf4j-2.0.11.jar;C:\Users\Rohit\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Rohit\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.2\spring-boot-starter-json-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.2\spring-boot-starter-tomcat-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.18\tomcat-embed-core-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.18\tomcat-embed-websocket-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-web\6.1.3\spring-web-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-beans\6.1.3\spring-beans-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-webmvc\6.1.3\spring-webmvc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aop\6.1.3\spring-aop-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context\6.1.3\spring-context-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-expression\6.1.3\spring-expression-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.2\spring-boot-starter-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.2\spring-boot-starter-aop-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.2\spring-boot-starter-jdbc-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jdbc\6.1.3\spring-jdbc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\hibernate\orm\hibernate-core\6.4.1.Final\hibernate-core-6.4.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Rohit\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Rohit\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Rohit\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Rohit\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Rohit\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-jpa\3.2.2\spring-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-commons\3.2.2\spring-data-commons-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-orm\6.1.3\spring-orm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-tx\6.1.3\spring-tx-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aspects\6.1.3\spring-aspects-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Rohit\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.2.2\spring-boot-starter-data-redis-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\lettuce\lettuce-core\6.3.1.RELEASE\lettuce-core-6.3.1.RELEASE.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-common\4.1.105.Final\netty-common-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-handler\4.1.105.Final\netty-handler-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-resolver\4.1.105.Final\netty-resolver-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-buffer\4.1.105.Final\netty-buffer-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.105.Final\netty-transport-native-unix-common-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-codec\4.1.105.Final\netty-codec-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\netty\netty-transport\4.1.105.Final\netty-transport-4.1.105.Final.jar;C:\Users\Rohit\.m2\repository\io\projectreactor\reactor-core\3.6.2\reactor-core-3.6.2.jar;C:\Users\Rohit\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-redis\3.2.2\spring-data-redis-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-keyvalue\3.2.2\spring-data-keyvalue-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-oxm\6.1.3\spring-oxm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context-support\6.1.3\spring-context-support-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.2\spring-boot-starter-validation-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.18\tomcat-embed-el-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Rohit\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.2.2\spring-boot-starter-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.2.2\spring-boot-actuator-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator\3.2.2\spring-boot-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-observation\1.12.2\micrometer-observation-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-commons\1.12.2\micrometer-commons-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-jakarta9\1.12.2\micrometer-jakarta9-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-registry-prometheus\1.12.2\micrometer-registry-prometheus-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-core\1.12.2\micrometer-core-1.12.2.jar;C:\Users\Rohit\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\Rohit\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_common\0.16.0\simpleclient_common-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient\0.16.0\simpleclient-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_otel\0.16.0\simpleclient_tracer_otel-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_common\0.16.0\simpleclient_tracer_common-0.16.0.jar;C:\Users\Rohit\.m2\repository\io\prometheus\simpleclient_tracer_otel_agent\0.16.0\simpleclient_tracer_otel_agent-0.16.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.2\spring-boot-starter-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test\3.2.2\spring-boot-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.2\spring-boot-test-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\Rohit\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Rohit\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Rohit\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Rohit\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Rohit\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Rohit\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Rohit\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-core\6.1.3\spring-core-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jcl\6.1.3\spring-jcl-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-test\6.1.3\spring-test-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Rohit\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-testcontainers\3.2.2\spring-boot-testcontainers-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.2\spring-boot-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\postgresql\1.19.3\postgresql-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\jdbc\1.19.3\jdbc-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\database-commons\1.19.3\database-commons-1.19.3.jar;C:\Users\Rohit\.m2\repository\org\testcontainers\testcontainers\1.19.3\testcontainers-1.19.3.jar;C:\Users\Rohit\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Rohit\.m2\repository\org\slf4j\slf4j-api\2.0.11\slf4j-api-2.0.11.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Rohit\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Rohit\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\Rohit\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\Rohit\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\rest-assured\5.3.2\rest-assured-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy\4.0.17\groovy-4.0.17.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy-xml\4.0.17\groovy-xml-4.0.17.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\Rohit\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Rohit\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\Rohit\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Rohit\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\json-path\5.3.2\json-path-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\groovy\groovy-json\4.0.17\groovy-json-4.0.17.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\rest-assured-common\5.3.2\rest-assured-common-5.3.2.jar;C:\Users\Rohit\.m2\repository\io\rest-assured\xml-path\5.3.2\xml-path-5.3.2.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;"/>
+    <property name="surefire.test.class.path" value="D:\Github-Projects\nightswatch\auth-service\target\test-classes;D:\Github-Projects\nightswatch\auth-service\target\classes;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.2\spring-boot-starter-web-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.2\spring-boot-starter-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot\3.2.2\spring-boot-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.2\spring-boot-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.2\spring-boot-starter-logging-3.2.2.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Rohit\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Rohit\.m2\repository\org\slf4j\jul-to-slf4j\2.0.11\jul-to-slf4j-2.0.11.jar;C:\Users\Rohit\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Rohit\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.2\spring-boot-starter-json-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.2\spring-boot-starter-tomcat-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.18\tomcat-embed-core-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.18\tomcat-embed-websocket-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-web\6.1.3\spring-web-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-beans\6.1.3\spring-beans-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-webmvc\6.1.3\spring-webmvc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-context\6.1.3\spring-context-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-expression\6.1.3\spring-expression-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.2\spring-boot-starter-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.2\spring-boot-starter-aop-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\aspectj\aspectjweaver\1.9.21\aspectjweaver-1.9.21.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.2\spring-boot-starter-jdbc-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jdbc\6.1.3\spring-jdbc-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\hibernate\orm\hibernate-core\6.4.1.Final\hibernate-core-6.4.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Rohit\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Rohit\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Rohit\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Rohit\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Rohit\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Rohit\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Rohit\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-jpa\3.2.2\spring-data-jpa-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\data\spring-data-commons\3.2.2\spring-data-commons-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-orm\6.1.3\spring-orm-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-tx\6.1.3\spring-tx-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\slf4j\slf4j-api\2.0.11\slf4j-api-2.0.11.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aspects\6.1.3\spring-aspects-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.2.2\spring-boot-starter-security-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-aop\6.1.3\spring-aop-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-config\6.2.1\spring-security-config-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-core\6.2.1\spring-security-core-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-crypto\6.2.1\spring-security-crypto-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\security\spring-security-web\6.2.1\spring-security-web-6.2.1.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.2\spring-boot-starter-validation-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.18\tomcat-embed-el-10.1.18.jar;C:\Users\Rohit\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Rohit\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Rohit\.m2\repository\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Rohit\.m2\repository\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.5\jjwt-api-0.12.5.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.5\jjwt-impl-0.12.5.jar;C:\Users\Rohit\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.5\jjwt-jackson-0.12.5.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-ui\2.1.0\springdoc-openapi-starter-webmvc-ui-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-webmvc-api\2.1.0\springdoc-openapi-starter-webmvc-api-2.1.0.jar;C:\Users\Rohit\.m2\repository\org\springdoc\springdoc-openapi-starter-common\2.1.0\springdoc-openapi-starter-common-2.1.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-core-jakarta\2.2.9\swagger-core-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\io\swagger\core\v3\swagger-models-jakarta\2.2.9\swagger-models-jakarta-2.2.9.jar;C:\Users\Rohit\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\Rohit\.m2\repository\org\webjars\swagger-ui\4.18.2\swagger-ui-4.18.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.2.2\spring-boot-starter-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.2.2\spring-boot-actuator-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-actuator\3.2.2\spring-boot-actuator-3.2.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-observation\1.12.2\micrometer-observation-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-commons\1.12.2\micrometer-commons-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-jakarta9\1.12.2\micrometer-jakarta9-1.12.2.jar;C:\Users\Rohit\.m2\repository\io\micrometer\micrometer-core\1.12.2\micrometer-core-1.12.2.jar;C:\Users\Rohit\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\Rohit\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Rohit\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Rohit\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.2\spring-boot-starter-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test\3.2.2\spring-boot-test-3.2.2.jar;C:\Users\Rohit\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.2\spring-boot-test-autoconfigure-3.2.2.jar;C:\Users\Rohit\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\Rohit\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Rohit\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Rohit\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Rohit\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Rohit\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Rohit\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Rohit\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Rohit\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Rohit\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\Rohit\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Rohit\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Rohit\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Rohit\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-core\6.1.3\spring-core-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-jcl\6.1.3\spring-jcl-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\springframework\spring-test\6.1.3\spring-test-6.1.3.jar;C:\Users\Rohit\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Rohit"/>
     <property name="user.language" value="en"/>
@@ -26,14 +26,14 @@
     <property name="java.version.date" value="2022-01-18"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17.0.2"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\Github-Projects\nightswatch\room-service"/>
+    <property name="basedir" value="D:\Github-Projects\nightswatch\auth-service"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="windows-1252"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rohit\AppData\Local\Temp\surefire1804370190329184741\surefirebooter-20260322223653562_9.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rohit\AppData\Local\Temp\surefire14296395039807210725\surefirebooter-20260322223634253_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8-LTS-86"/>
@@ -48,10 +48,10 @@
     <property name="java.io.tmpdir" value="C:\Users\Rohit\AppData\Local\Temp\"/>
     <property name="com.zaxxer.hikari.pool_number" value="1"/>
     <property name="java.version" value="17.0.2"/>
-    <property name="user.dir" value="D:\Github-Projects\nightswatch\room-service"/>
+    <property name="user.dir" value="D:\Github-Projects\nightswatch\auth-service"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="35268"/>
+    <property name="PID" value="36888"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -61,10 +61,11 @@
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[auth-service] "/>
   </properties>
-  <testcase name="testUpdateVideoOnInactiveRoom" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="1.075">
-    <system-out><![CDATA[22:36:54.720 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.nightswatch.roomservice.controller.RoomControllerIntegrationTest]: RoomControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:36:55.038 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.nightswatch.roomservice.RoomServiceApplication for test class com.nightswatch.roomservice.controller.RoomControllerIntegrationTest
+  <testcase name="loginReturnsTokenForExistingUser" classname="com.nightswatch.authservice.controller.AuthControllerIntegrationTest" time="2.276">
+    <system-out><![CDATA[22:36:36.244 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.nightswatch.authservice.controller.AuthControllerIntegrationTest]: AuthControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:36:36.686 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.nightswatch.authservice.AuthServiceApplication for test class com.nightswatch.authservice.controller.AuthControllerIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -74,39 +75,59 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.2)
 
-2026-03-22T22:36:55.647+05:30  INFO 35268 --- [           main] c.n.r.c.RoomControllerIntegrationTest    : Starting RoomControllerIntegrationTest using Java 17.0.2 with PID 35268 (started by Rohit in D:\Github-Projects\nightswatch\room-service)
-2026-03-22T22:36:55.649+05:30 DEBUG 35268 --- [           main] c.n.r.c.RoomControllerIntegrationTest    : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-22T22:36:55.650+05:30  INFO 35268 --- [           main] c.n.r.c.RoomControllerIntegrationTest    : The following 1 profile is active: "test"
-2026-03-22T22:36:55.651+05:30 DEBUG 35268 --- [           main] o.s.boot.SpringApplication               : Loading source class com.nightswatch.roomservice.RoomServiceApplication
-2026-03-22T22:36:56.052+05:30 DEBUG 35268 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5f84abe8
-2026-03-22T22:36:58.119+05:30 DEBUG 35268 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.nightswatch.roomservice'. Automatic @Repository and @Entity scanning is enabled.
-2026-03-22T22:37:02.351+05:30  WARN 35268 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-22T22:37:04.058+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    drop table if exists rooms cascade 
-2026-03-22T22:37:04.068+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    create table rooms (
-        is_active boolean not null,
-        room_code varchar(6) not null unique,
+2026-03-22T22:36:37.831+05:30  INFO 36888 --- [auth-service] [           main] c.n.a.c.AuthControllerIntegrationTest    : Starting AuthControllerIntegrationTest using Java 17.0.2 with PID 36888 (started by Rohit in D:\Github-Projects\nightswatch\auth-service)
+2026-03-22T22:36:37.835+05:30  INFO 36888 --- [auth-service] [           main] c.n.a.c.AuthControllerIntegrationTest    : The following 1 profile is active: "test"
+2026-03-22T22:36:37.836+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.boot.SpringApplication               : Loading source class com.nightswatch.authservice.AuthServiceApplication
+2026-03-22T22:36:37.874+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5f212d84
+2026-03-22T22:36:39.917+05:30  INFO 36888 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-22T22:36:39.947+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.nightswatch.authservice'. Automatic @Repository and @Entity scanning is enabled.
+2026-03-22T22:36:40.010+05:30  INFO 36888 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interface.
+2026-03-22T22:36:41.787+05:30  INFO 36888 --- [auth-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-22T22:36:41.939+05:30  INFO 36888 --- [auth-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-22T22:36:42.047+05:30  INFO 36888 --- [auth-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-22T22:36:42.690+05:30  INFO 36888 --- [auth-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-22T22:36:42.739+05:30  INFO 36888 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-22T22:36:43.094+05:30  INFO 36888 --- [auth-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-03-22T22:36:43.095+05:30  INFO 36888 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-22T22:36:43.137+05:30  WARN 36888 --- [auth-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-22T22:36:44.840+05:30  INFO 36888 --- [auth-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-22T22:36:44.929+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
+    drop table if exists user_accounts cascade 
+2026-03-22T22:36:44.963+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
+    create table user_accounts (
         created_at timestamp(6) with time zone not null,
         id uuid not null,
-        current_video_url varchar(255),
-        host_id varchar(255) not null,
+        role varchar(32) not null,
+        username varchar(32) not null unique,
+        email varchar(255) not null unique,
+        password_hash varchar(255) not null,
         primary key (id)
     )
-2026-03-22T22:37:07.295+05:30  WARN 35268 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-22T22:37:07.565+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
-2026-03-22T22:37:07.952+05:30 DEBUG 35268 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-03-22T22:37:08.150+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-03-22T22:37:08.208+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-03-22T22:37:09.292+05:30 DEBUG 35268 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-03-22T22:37:09.292+05:30 DEBUG 35268 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
-2026-03-22T22:37:09.308+05:30 DEBUG 35268 --- [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
-2026-03-22T22:37:09.309+05:30 DEBUG 35268 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-03-22T22:37:09.309+05:30 DEBUG 35268 --- [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
-2026-03-22T22:37:09.309+05:30 DEBUG 35268 --- [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
-2026-03-22T22:37:09.311+05:30  INFO 35268 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-03-22T22:37:09.322+05:30  INFO 35268 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2026-03-22T22:37:09.502+05:30 DEBUG 35268 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-03-22T22:36:44.988+05:30  INFO 36888 --- [auth-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-22T22:36:46.140+05:30  WARN 36888 --- [auth-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-22T22:36:46.316+05:30  WARN 36888 --- [auth-service] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0c4aa86c-9aa6-4eaa-b859-5d08e7cbb467
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-22T22:36:47.124+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2026-03-22T22:36:47.407+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-03-22T22:36:47.691+05:30  INFO 36888 --- [auth-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-03-22T22:36:47.744+05:30  INFO 36888 --- [auth-service] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29f3ea39, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18eb6ea3, org.springframework.security.web.context.SecurityContextHolderFilter@30ae3c46, org.springframework.security.web.header.HeaderWriterFilter@49a0fe14, org.springframework.web.filter.CorsFilter@19740583, org.springframework.security.web.authentication.logout.LogoutFilter@50165a6d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33e19be9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e95c023, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365fde74, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8850865, org.springframework.security.web.access.ExceptionTranslationFilter@75c0e6be, org.springframework.security.web.access.intercept.AuthorizationFilter@4fc9e73d]
+2026-03-22T22:36:48.239+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-22T22:36:48.554+05:30 DEBUG 36888 --- [auth-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-22T22:36:49.289+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-03-22T22:36:49.290+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: 
+2026-03-22T22:36:49.311+05:30 DEBUG 36888 --- [auth-service] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-03-22T22:36:49.311+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-03-22T22:36:49.311+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-03-22T22:36:49.311+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-03-22T22:36:49.311+05:30 DEBUG 36888 --- [auth-service] [           main] .DelegatingFilterProxyRegistrationBean$1 : Filter 'springSecurityFilterChain' configured for use
+2026-03-22T22:36:49.314+05:30  INFO 36888 --- [auth-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-03-22T22:36:49.315+05:30  INFO 36888 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-03-22T22:36:49.319+05:30  INFO 36888 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-03-22T22:36:49.461+05:30 DEBUG 36888 --- [auth-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -131,9 +152,6 @@ Positive matches:
 
    CacheMeterBinderProvidersConfiguration matched:
       - @ConditionalOnClass found required class 'io.micrometer.core.instrument.binder.MeterBinder' (OnClassCondition)
-
-   CacheMeterBinderProvidersConfiguration.RedisCacheMeterBinderProviderConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.redis.cache.RedisCache' (OnClassCondition)
 
    CompositeMeterRegistryAutoConfiguration matched:
       - @ConditionalOnClass found required class 'io.micrometer.core.instrument.composite.CompositeMeterRegistry' (OnClassCondition)
@@ -309,6 +327,12 @@ Positive matches:
    HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration#stringHttpMessageConverter matched:
       - @ConditionalOnMissingBean (types: org.springframework.http.converter.StringHttpMessageConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
+   InfoEndpointAutoConfiguration matched:
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+
+   InfoEndpointAutoConfiguration#infoEndpoint matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.info.InfoEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
    JacksonAutoConfiguration matched:
       - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
 
@@ -413,24 +437,6 @@ Positive matches:
    JvmMetricsAutoConfiguration#jvmThreadMetrics matched:
       - @ConditionalOnMissingBean (types: io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
-   LettuceConnectionConfiguration matched:
-      - @ConditionalOnClass found required class 'io.lettuce.core.RedisClient' (OnClassCondition)
-      - @ConditionalOnProperty (spring.data.redis.client-type=lettuce) matched (OnPropertyCondition)
-
-   LettuceConnectionConfiguration#lettuceClientResources matched:
-      - @ConditionalOnMissingBean (types: io.lettuce.core.resource.ClientResources; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   LettuceConnectionConfiguration#redisConnectionFactory matched:
-      - @ConditionalOnMissingBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-
-   LettuceMetricsAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'io.lettuce.core.RedisClient', 'io.lettuce.core.metrics.MicrometerCommandLatencyRecorder' (OnClassCondition)
-      - @ConditionalOnBean (types: io.micrometer.core.instrument.MeterRegistry; SearchStrategy: all) found bean 'simpleMeterRegistry' (OnBeanCondition)
-
-   LettuceMetricsAutoConfiguration#micrometerOptions matched:
-      - @ConditionalOnMissingBean (types: io.lettuce.core.metrics.MicrometerOptions; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
    LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
       - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
 
@@ -450,13 +456,6 @@ Positive matches:
 
    MetricsAutoConfiguration#micrometerClock matched:
       - @ConditionalOnMissingBean (types: io.micrometer.core.instrument.Clock; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   MetricsEndpointAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'io.micrometer.core.annotation.Timed' (OnClassCondition)
-      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
-
-   MetricsEndpointAutoConfiguration#metricsEndpoint matched:
-      - @ConditionalOnBean (types: io.micrometer.core.instrument.MeterRegistry; SearchStrategy: all) found bean 'simpleMeterRegistry'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.metrics.MetricsEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    MockMvcAutoConfiguration matched:
       - found 'session' scope (OnWebApplicationCondition)
@@ -480,9 +479,6 @@ Positive matches:
 
    NamedParameterJdbcTemplateConfiguration matched:
       - @ConditionalOnSingleCandidate (types: org.springframework.jdbc.core.JdbcTemplate; SearchStrategy: all) found a single bean 'jdbcTemplate'; @ConditionalOnMissingBean (types: org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   NettyAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'io.netty.util.NettyRuntime' (OnClassCondition)
 
    NoOpCacheConfiguration matched:
       - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
@@ -517,59 +513,6 @@ Positive matches:
 
    PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
       - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
-
-   ReactiveHealthEndpointConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Flux' (OnClassCondition)
-      - @ConditionalOnBean (types: org.springframework.boot.actuate.health.HealthEndpoint; SearchStrategy: all) found bean 'healthEndpoint' (OnBeanCondition)
-
-   ReactiveHealthEndpointConfiguration#reactiveHealthContributorRegistry matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.health.ReactiveHealthContributorRegistry; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   ReactorAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Hooks' (OnClassCondition)
-
-   RedisAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
-
-   RedisAutoConfiguration#redisConnectionDetails matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.data.redis.RedisConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisAutoConfiguration#redisTemplate matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found a single bean 'redisConnectionFactory'; @ConditionalOnMissingBean (names: redisTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisAutoConfiguration#stringRedisTemplate matched:
-      - @ConditionalOnSingleCandidate (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found a single bean 'redisConnectionFactory'; @ConditionalOnMissingBean (types: org.springframework.data.redis.core.StringRedisTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisCacheConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
-      - Cache org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration automatic cache type (CacheCondition)
-
-   RedisHealthContributorAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
-      - @ConditionalOnEnabledHealthIndicator management.health.defaults.enabled is considered true (OnEnabledHealthIndicatorCondition)
-      - @ConditionalOnBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found bean 'redisConnectionFactory' (OnBeanCondition)
-
-   RedisReactiveAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.data.redis.connection.ReactiveRedisConnectionFactory', 'org.springframework.data.redis.core.ReactiveRedisTemplate', 'reactor.core.publisher.Flux' (OnClassCondition)
-
-   RedisReactiveAutoConfiguration#reactiveRedisTemplate matched:
-      - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) found bean 'redisConnectionFactory'; @ConditionalOnMissingBean (names: reactiveRedisTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisReactiveAutoConfiguration#reactiveStringRedisTemplate matched:
-      - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) found bean 'redisConnectionFactory'; @ConditionalOnMissingBean (names: reactiveStringRedisTemplate; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisReactiveHealthContributorAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.data.redis.connection.ReactiveRedisConnectionFactory', 'reactor.core.publisher.Flux' (OnClassCondition)
-      - @ConditionalOnEnabledHealthIndicator management.health.defaults.enabled is considered true (OnEnabledHealthIndicatorCondition)
-      - @ConditionalOnBean (types: org.springframework.data.redis.connection.ReactiveRedisConnectionFactory; SearchStrategy: all) found bean 'redisConnectionFactory' (OnBeanCondition)
-
-   RedisReactiveHealthContributorAutoConfiguration#redisHealthContributor matched:
-      - @ConditionalOnMissingBean (names: redisHealthIndicator,redisHealthContributor; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   RedisRepositoriesAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
-      - @ConditionalOnProperty (spring.data.redis.repositories.enabled=true) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found bean 'redisConnectionFactory'; @ConditionalOnMissingBean (types: org.springframework.data.redis.repository.support.RedisRepositoryFactoryBean; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    RepositoryMetricsAutoConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.data.repository.Repository' (OnClassCondition)
@@ -616,6 +559,31 @@ Positive matches:
       - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
       - @ConditionalOnBean (types: io.micrometer.observation.ObservationRegistry; SearchStrategy: all) found bean 'observationRegistry' (OnBeanCondition)
 
+   SecurityAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityAutoConfiguration#authenticationEventPublisher matched:
+      - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationEventPublisher; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SecurityFilterAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityFilterAutoConfiguration#securityFilterChainRegistration matched:
+      - @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) found bean 'springSecurityFilterChain' (OnBeanCondition)
+
+   SecurityRequestMatchersManagementContextConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.web.util.matcher.RequestMatcher' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SecurityRequestMatchersManagementContextConfiguration.MvcRequestMatcherConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath; SearchStrategy: all) found bean 'dispatcherServletRegistration' (OnBeanCondition)
+
+   SecurityRequestMatchersManagementContextConfiguration.MvcRequestMatcherConfiguration#requestMatcherProvider matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.security.servlet.RequestMatcherProvider; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
    ServletEndpointManagementContextConfiguration matched:
       - found 'session' scope (OnWebApplicationCondition)
 
@@ -646,6 +614,13 @@ Positive matches:
 
    SimpleMetricsExportAutoConfiguration#simpleConfig matched:
       - @ConditionalOnMissingBean (types: io.micrometer.core.instrument.simple.SimpleConfig; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringBootWebSecurityConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    SpringDataWebAutoConfiguration matched:
       - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
@@ -710,20 +685,8 @@ Positive matches:
    SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider#springDataWebPropertiesProvider matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringDataWebPropertiesProvider; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Flux' (OnClassCondition)
-
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration#webFluxSupportConverter matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.converters.WebFluxSupportConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
    SpringDocConfiguration.WebConversionServiceConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.web.format.WebConversionService' (OnClassCondition)
-
-   SpringDocGroovyConfiguration matched:
-      - @ConditionalOnClass found required class 'groovy.lang.MetaClass' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnExpression (#{${springdoc.api-docs.enabled:true} and ${springdoc.enable-groovy:true}}) resulted in true (OnExpressionCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
 
    SpringDocPageableConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.data.domain.Pageable' (OnClassCondition)
@@ -737,6 +700,15 @@ Positive matches:
    SpringDocPageableConfiguration#pageableOpenAPIConverter matched:
       - @ConditionalOnProperty (springdoc.model-converters.pageable-converter.enabled) matched (OnPropertyCondition)
       - @ConditionalOnMissingBean (types: org.springdoc.core.converters.PageableOpenAPIConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDocSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.web.SecurityFilterChain' (OnClassCondition)
+      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnExpression (#{${springdoc.api-docs.enabled:true} and ${springdoc.enable-spring-security:true}}) resulted in true (OnExpressionCondition)
+      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
+
+   SpringDocSecurityConfiguration.SpringSecurityLoginEndpointConfiguration matched:
+      - @ConditionalOnClass found required class 'jakarta.servlet.Filter' (OnClassCondition)
 
    SpringDocSortConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.data.domain.Sort' (OnClassCondition)
@@ -880,9 +852,6 @@ Positive matches:
    TaskSchedulingConfigurations.ThreadPoolTaskSchedulerBuilderConfiguration#threadPoolTaskSchedulerBuilder matched:
       - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskSchedulerBuilder,org.springframework.boot.task.ThreadPoolTaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
-   TestcontainersPropertySourceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.test.context.DynamicPropertyRegistry' (OnClassCondition)
-
    TomcatMetricsAutoConfiguration matched:
       - @ConditionalOnClass found required classes 'io.micrometer.core.instrument.binder.tomcat.TomcatMetrics', 'org.apache.catalina.Manager' (OnClassCondition)
       - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
@@ -910,6 +879,11 @@ Positive matches:
 
    TransactionManagerCustomizationAutoConfiguration#platformTransactionManagerCustomizers matched:
       - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    ValidationAutoConfiguration matched:
       - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
@@ -1093,7 +1067,7 @@ Negative matches:
 
    CacheMeterBinderProvidersConfiguration.CaffeineCacheMeterBinderProviderConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Cache' (OnClassCondition)
+         - @ConditionalOnClass did not find required classes 'org.springframework.cache.caffeine.CaffeineCache', 'com.github.benmanes.caffeine.cache.Cache' (OnClassCondition)
 
    CacheMeterBinderProvidersConfiguration.HazelcastCacheMeterBinderProviderConfiguration:
       Did not match:
@@ -1101,7 +1075,11 @@ Negative matches:
 
    CacheMeterBinderProvidersConfiguration.JCacheCacheMeterBinderProviderConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'javax.cache.CacheManager' (OnClassCondition)
+         - @ConditionalOnClass did not find required classes 'org.springframework.cache.jcache.JCacheCache', 'javax.cache.CacheManager' (OnClassCondition)
+
+   CacheMeterBinderProvidersConfiguration.RedisCacheMeterBinderProviderConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.cache.RedisCache' (OnClassCondition)
 
    CacheMetricsAutoConfiguration:
       Did not match:
@@ -1283,7 +1261,7 @@ Negative matches:
 
    ElasticsearchReactiveHealthContributorAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
 
    ElasticsearchRepositoriesAutoConfiguration:
       Did not match:
@@ -1504,10 +1482,6 @@ Negative matches:
       Did not match:
          - @ConditionalOnEnabledInfoContributor management.info.os.enabled is not true (OnEnabledInfoContributorCondition)
 
-   InfoEndpointAutoConfiguration:
-      Did not match:
-         - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
-
    IntegrationAutoConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (OnClassCondition)
@@ -1527,10 +1501,6 @@ Negative matches:
    JdbcRepositoriesAutoConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration' (OnClassCondition)
-
-   JedisConnectionConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.apache.commons.pool2.impl.GenericObjectPool', 'redis.clients.jedis.Jedis' (OnClassCondition)
 
    JerseyAutoConfiguration:
       Did not match:
@@ -1630,9 +1600,9 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (OnClassCondition)
 
-   LettuceConnectionConfiguration#redisConnectionFactoryVirtualThreads:
+   LettuceMetricsAutoConfiguration:
       Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found beans of type 'org.springframework.data.redis.connection.RedisConnectionFactory' redisConnectionFactory (OnBeanCondition)
+         - @ConditionalOnClass did not find required class 'io.lettuce.core.metrics.MicrometerCommandLatencyRecorder' (OnClassCondition)
 
    LiquibaseAutoConfiguration:
       Did not match:
@@ -1656,10 +1626,7 @@ Negative matches:
 
    MailHealthContributorAutoConfiguration:
       Did not match:
-         - @ConditionalOnBean (types: org.springframework.mail.javamail.JavaMailSenderImpl; SearchStrategy: all) did not find any beans of type org.springframework.mail.javamail.JavaMailSenderImpl (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnClassCondition)
-         - @ConditionalOnEnabledHealthIndicator management.health.defaults.enabled is considered true (OnEnabledHealthIndicatorCondition)
+         - @ConditionalOnClass did not find required class 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnClassCondition)
 
    MailSenderAutoConfiguration:
       Did not match:
@@ -1667,7 +1634,7 @@ Negative matches:
 
    MailSenderValidatorAutoConfiguration:
       Did not match:
-         - @ConditionalOnProperty (spring.mail.test-connection) did not find property 'test-connection' (OnPropertyCondition)
+         - @ConditionalOnSingleCandidate did not find required type 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnBeanCondition)
 
    ManagementContextAutoConfiguration.DifferentManagementContextConfiguration:
       Did not match:
@@ -1675,7 +1642,7 @@ Negative matches:
 
    ManagementWebSecurityAutoConfiguration:
       Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass did not find required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
       Matched:
          - found 'session' scope (OnWebApplicationCondition)
 
@@ -1692,6 +1659,12 @@ Negative matches:
          - @ConditionalOnProperty (micrometer.observations.annotations.enabled=true) did not find property 'enabled' (OnPropertyCondition)
       Matched:
          - @ConditionalOnClass found required classes 'io.micrometer.core.instrument.MeterRegistry', 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   MetricsEndpointAutoConfiguration:
+      Did not match:
+         - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'io.micrometer.core.annotation.Timed' (OnClassCondition)
 
    MicrometerTracingAutoConfiguration:
       Did not match:
@@ -1747,7 +1720,7 @@ Negative matches:
 
    MongoReactiveHealthContributorAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.mongodb.core.ReactiveMongoTemplate' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
 
    MongoReactiveRepositoriesAutoConfiguration:
       Did not match:
@@ -1799,6 +1772,10 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
 
+   NettyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.netty.util.NettyRuntime' (OnClassCondition)
+
    NewRelicMetricsExportAutoConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'io.micrometer.newrelic.NewRelicMeterRegistry' (OnClassCondition)
@@ -1821,7 +1798,7 @@ Negative matches:
 
    OAuth2ClientAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.registration.ClientRegistration' (OnClassCondition)
 
    OAuth2ResourceServerAutoConfiguration:
       Did not match:
@@ -1870,9 +1847,7 @@ Negative matches:
 
    PrometheusMetricsExportAutoConfiguration:
       Did not match:
-         - @ConditionalOnEnabledMetricsExport management.defaults.metrics.export.enabled is considered false (OnMetricsExportEnabledCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'io.micrometer.prometheus.PrometheusMeterRegistry' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'io.micrometer.prometheus.PrometheusMeterRegistry' (OnClassCondition)
 
    PulsarAutoConfiguration:
       Did not match:
@@ -1936,7 +1911,7 @@ Negative matches:
 
    RSocketStrategiesAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'io.netty.buffer.PooledByteBufAllocator' (OnClassCondition)
 
    RabbitAutoConfiguration:
       Did not match:
@@ -1962,13 +1937,17 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchClient' (OnClassCondition)
 
+   ReactiveHealthEndpointConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
    ReactiveManagementContextAutoConfiguration:
       Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
 
    ReactiveManagementWebSecurityAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
 
    ReactiveMultipartAutoConfiguration:
       Did not match:
@@ -1976,27 +1955,54 @@ Negative matches:
 
    ReactiveOAuth2ClientAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
 
    ReactiveOAuth2ResourceServerAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
 
    ReactiveSecurityAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
 
    ReactiveUserDetailsServiceAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 0 matched 2 did not; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication.ReactiveWebApplicationCondition did not find reactive web application classes; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication.RSocketSecurityEnabledCondition @ConditionalOnBean (types: org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler; SearchStrategy: all) did not find any beans of type org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler (ReactiveUserDetailsServiceAutoConfiguration.RSocketEnabledOrReactiveWebApplication)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+         - AnyNestedCondition 1 matched 2 did not; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on ReactiveUserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.ReactiveOpaqueTokenIntrospector' (ReactiveUserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
 
    ReactiveWebServerFactoryAutoConfiguration:
       Did not match:
          - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
 
-   RedisHealthContributorAutoConfiguration#redisHealthContributor:
+   ReactorAutoConfiguration:
       Did not match:
-         - @ConditionalOnMissingBean (names: redisHealthIndicator,redisHealthContributor; SearchStrategy: all) found beans named redisHealthContributor (OnBeanCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Hooks' (OnClassCondition)
+
+   RedisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   RedisHealthContributorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   RedisReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   RedisReactiveHealthContributorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
+   RedisRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
 
    RepositoryRestMvcAutoConfiguration:
       Did not match:
@@ -2010,17 +2016,13 @@ Negative matches:
       Did not match:
          - @ConditionalOnAvailableEndpoint no 'management.endpoints' property marked it as exposed (OnAvailableEndpointCondition)
 
-   SecurityAutoConfiguration:
+   SecurityDataConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
 
-   SecurityFilterAutoConfiguration:
+   SecurityRequestMatchersManagementContextConfiguration.JerseyRequestMatcherConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
-
-   SecurityRequestMatchersManagementContextConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.web.util.matcher.RequestMatcher' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'org.glassfish.jersey.server.ResourceConfig' (OnClassCondition)
 
    SendGridAutoConfiguration:
       Did not match:
@@ -2066,6 +2068,10 @@ Negative matches:
       Did not match:
          - @ConditionalOnProperty (spring.application.admin.enabled=true) did not find property 'enabled' (OnPropertyCondition)
 
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
    SpringDocConfiguration#propertiesResolverForSchema:
       Did not match:
          - @ConditionalOnProperty (springdoc.api-docs.resolve-schema-properties) did not find property 'springdoc.api-docs.resolve-schema-properties' (OnPropertyCondition)
@@ -2094,6 +2100,10 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestConfiguration' (OnClassCondition)
 
+   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Flux' (OnClassCondition)
+
    SpringDocDataRestConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestConfiguration' (OnClassCondition)
@@ -2101,6 +2111,10 @@ Negative matches:
    SpringDocFunctionCatalogConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.cloud.function.web.function.FunctionEndpointInitializer' (OnClassCondition)
+
+   SpringDocGroovyConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.lang.MetaClass' (OnClassCondition)
 
    SpringDocHateoasConfiguration:
       Did not match:
@@ -2122,9 +2136,13 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'kotlinx.coroutines.flow.Flow' (OnClassCondition)
 
-   SpringDocSecurityConfiguration:
+   SpringDocSecurityConfiguration.SpringDocSecurityOAuth2Configuration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.web.SecurityFilterChain' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService' (OnClassCondition)
+
+   SpringDocSecurityConfiguration.SpringSecurityLoginEndpointConfiguration#springSecurityLoginEndpointCustomiser:
+      Did not match:
+         - @ConditionalOnProperty (springdoc.show-login-endpoint) did not find property 'springdoc.show-login-endpoint' (OnPropertyCondition)
 
    SpringDocSortConfiguration#delegatingMethodParameterCustomizer:
       Did not match:
@@ -2208,10 +2226,6 @@ Negative matches:
       Did not match:
          - @ConditionalOnProperty (spring.aop.proxy-target-class=false) did not find property 'proxy-target-class' (OnPropertyCondition)
 
-   UserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
-
    WavefrontAutoConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'com.wavefront.sdk.common.application.ApplicationTags' (OnClassCondition)
@@ -2266,7 +2280,7 @@ Negative matches:
 
    WebServiceTemplateAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.ws.client.core.WebServiceTemplate' (OnClassCondition)
+         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
 
    WebServicesAutoConfiguration:
       Did not match:
@@ -2274,7 +2288,7 @@ Negative matches:
 
    WebSessionIdResolverAutoConfiguration:
       Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+         - @ConditionalOnClass did not find required class 'reactor.core.publisher.Mono' (OnClassCondition)
 
    WebSocketMessagingAutoConfiguration:
       Did not match:
@@ -2332,8 +2346,6 @@ Unconditional classes:
 
     org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration
 
-    org.springframework.boot.testcontainers.service.connection.ServiceConnectionAutoConfiguration
-
     org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration
 
     org.springframework.boot.actuate.autoconfigure.health.HealthContributorAutoConfiguration
@@ -2346,353 +2358,122 @@ Unconditional classes:
 
 
 
-2026-03-22T22:37:09.524+05:30  INFO 35268 --- [           main] c.n.r.c.RoomControllerIntegrationTest    : Started RoomControllerIntegrationTest in 14.327 seconds (process running for 15.84)
-2026-03-22T22:37:09.591+05:30 DEBUG 35268 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-03-22T22:37:09.594+05:30 DEBUG 35268 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-03-22T22:37:09.864+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+2026-03-22T22:36:49.484+05:30  INFO 36888 --- [auth-service] [           main] c.n.a.c.AuthControllerIntegrationTest    : Started AuthControllerIntegrationTest in 12.411 seconds (process running for 14.821)
+2026-03-22T22:36:49.600+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-03-22T22:36:49.604+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-03-22T22:36:50.559+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.authservice.controller.AuthController#register(RegisterRequest)
+2026-03-22T22:36:50.616+05:30 DEBUG 36888 --- [auth-service] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=alice, email=alice@example.com, password=password123)]
+2026-03-22T22:36:50.986+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id 
     from
-        rooms r1_0
-2026-03-22T22:37:09.969+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
+        user_accounts ua1_0 
     where
-        r1_0.id=?
-2026-03-22T22:37:10.047+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+        upper(ua1_0.username)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:51.067+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
+    select
+        ua1_0.id 
+    from
+        user_accounts ua1_0 
+    where
+        upper(ua1_0.email)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:51.472+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     insert 
     into
-        rooms
-        (created_at, current_video_url, host_id, is_active, room_code, id) 
+        user_accounts
+        (created_at, email, password_hash, role, username, id) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-03-22T22:37:10.166+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#updateVideo(String, UpdateRoomVideoRequest)
-2026-03-22T22:37:10.166+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [PATCH] /api/v1/rooms/ABC123/video 
-2026-03-22T22:37:10.254+05:30 DEBUG 35268 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UpdateRoomVideoRequest(currentVideoUrl=http://example.com/new.mp4)]
-2026-03-22T22:37:10.435+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+2026-03-22T22:36:51.504+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-22T22:36:51.520+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponse(token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGljZSIsImVtYWlsIjoiYWxpY2VAZXhhbXBsZS5jb20iLCJy (truncated)...]
+2026-03-22T22:36:51.607+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.authservice.controller.AuthController#login(LoginRequest)
+2026-03-22T22:36:51.612+05:30 DEBUG 36888 --- [auth-service] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [LoginRequest(username=alice, password=password123)]
+2026-03-22T22:36:51.637+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id,
+        ua1_0.created_at,
+        ua1_0.email,
+        ua1_0.password_hash,
+        ua1_0.role,
+        ua1_0.username 
     from
-        rooms r1_0 
+        user_accounts ua1_0 
     where
-        r1_0.room_code=?
-2026-03-22T22:37:10.451+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.nightswatch.roomservice.exception.GlobalExceptionHandler#handleRoomInactive(RoomInactiveException, HttpServletRequest)
-2026-03-22T22:37:10.487+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:10.512+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2026-03-22T17:07:10.476300500Z, status=400, error=Bad Request, message=Room  (truncated)...]
-2026-03-22T22:37:10.531+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.nightswatch.roomservice.exception.RoomInactiveException: Room is not active: ABC123]
-2026-03-22T22:37:10.532+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [PATCH] /api/v1/rooms/ABC123/video  - Status: 400 - Duration: 366ms
+        upper(ua1_0.username)=upper(?)
+2026-03-22T22:36:51.784+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-22T22:36:51.785+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponse(token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGljZSIsImVtYWlsIjoiYWxpY2VAZXhhbXBsZS5jb20iLCJy (truncated)...]
 ]]></system-out>
   </testcase>
-  <testcase name="testGetRoomNotFound" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.069">
-    <system-out><![CDATA[2026-03-22T22:37:10.697+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+  <testcase name="validateReturnsParsedClaims" classname="com.nightswatch.authservice.controller.AuthControllerIntegrationTest" time="0.326">
+    <system-out><![CDATA[2026-03-22T22:36:51.915+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.authservice.controller.AuthController#register(RegisterRequest)
+2026-03-22T22:36:51.918+05:30 DEBUG 36888 --- [auth-service] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=bob, email=bob@example.com, password=password123)]
+2026-03-22T22:36:51.921+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id 
     from
-        rooms r1_0
-2026-03-22T22:37:10.713+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    delete 
-    from
-        rooms 
+        user_accounts ua1_0 
     where
-        id=?
-2026-03-22T22:37:10.725+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#getRoom(String)
-2026-03-22T22:37:10.725+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [GET] /api/v1/rooms/NOTFOUND 
-2026-03-22T22:37:10.745+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+        upper(ua1_0.username)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:51.923+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id 
     from
-        rooms r1_0 
+        user_accounts ua1_0 
     where
-        r1_0.room_code=?
-2026-03-22T22:37:10.751+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.nightswatch.roomservice.exception.GlobalExceptionHandler#handleRoomNotFound(RoomNotFoundException, HttpServletRequest)
-2026-03-22T22:37:10.751+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:10.753+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2026-03-22T17:07:10.751725500Z, status=404, error=Not Found, message=Room no (truncated)...]
-2026-03-22T22:37:10.753+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.nightswatch.roomservice.exception.RoomNotFoundException: Room not found for code: NOTFOUND]
-2026-03-22T22:37:10.753+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [GET] /api/v1/rooms/NOTFOUND  - Status: 404 - Duration: 28ms
-]]></system-out>
-  </testcase>
-  <testcase name="testDeactivateRoom" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.124">
-    <system-out><![CDATA[2026-03-22T22:37:10.777+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0
-2026-03-22T22:37:10.784+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.id=?
-2026-03-22T22:37:10.787+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+        upper(ua1_0.email)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:52.059+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     insert 
     into
-        rooms
-        (created_at, current_video_url, host_id, is_active, room_code, id) 
+        user_accounts
+        (created_at, email, password_hash, role, username, id) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-03-22T22:37:10.794+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#deactivateRoom(String)
-2026-03-22T22:37:10.794+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [DELETE] /api/v1/rooms/ABC123 
-2026-03-22T22:37:10.799+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.room_code=?
-2026-03-22T22:37:10.817+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    update
-        rooms 
-    set
-        current_video_url=?,
-        host_id=?,
-        is_active=?,
-        room_code=? 
-    where
-        id=?
-2026-03-22T22:37:10.835+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:10.836+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
-2026-03-22T22:37:10.839+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [DELETE] /api/v1/rooms/ABC123  - Status: 204 - Duration: 45ms
-2026-03-22T22:37:10.880+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.room_code=?
+2026-03-22T22:36:52.061+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-22T22:36:52.062+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponse(token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJib2IiLCJlbWFpbCI6ImJvYkBleGFtcGxlLmNvbSIsInJvbGUi (truncated)...]
+2026-03-22T22:36:52.111+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.authservice.controller.AuthController#validate(TokenValidationRequest)
+2026-03-22T22:36:52.114+05:30 DEBUG 36888 --- [auth-service] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [TokenValidationRequest(token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJib2IiLCJlbWFpbCI6ImJvYkBleGFtcGxlLmNvbS (truncated)...]
+2026-03-22T22:36:52.213+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-22T22:36:52.224+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [TokenValidationResponse(valid=true, username=bob, email=bob@example.com, role=USER, expiresAt=2026-0 (truncated)...]
 ]]></system-out>
   </testcase>
-  <testcase name="testGetRoom" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.06">
-    <system-out><![CDATA[2026-03-22T22:37:10.901+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+  <testcase name="registerReturnsToken" classname="com.nightswatch.authservice.controller.AuthControllerIntegrationTest" time="0.164">
+    <system-out><![CDATA[2026-03-22T22:36:52.245+05:30 DEBUG 36888 --- [auth-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.authservice.controller.AuthController#register(RegisterRequest)
+2026-03-22T22:36:52.246+05:30 DEBUG 36888 --- [auth-service] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [RegisterRequest(username=rohit, email=rohit@example.com, password=password123)]
+2026-03-22T22:36:52.253+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id 
     from
-        rooms r1_0
-2026-03-22T22:37:10.901+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    delete 
-    from
-        rooms 
+        user_accounts ua1_0 
     where
-        id=?
-2026-03-22T22:37:10.908+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+        upper(ua1_0.username)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:52.256+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
+        ua1_0.id 
     from
-        rooms r1_0 
+        user_accounts ua1_0 
     where
-        r1_0.id=?
-2026-03-22T22:37:10.910+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
+        upper(ua1_0.email)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-22T22:36:52.387+05:30 DEBUG 36888 --- [auth-service] [           main] org.hibernate.SQL                        : 
     insert 
     into
-        rooms
-        (created_at, current_video_url, host_id, is_active, room_code, id) 
+        user_accounts
+        (created_at, email, password_hash, role, username, id) 
     values
         (?, ?, ?, ?, ?, ?)
-2026-03-22T22:37:10.910+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#getRoom(String)
-2026-03-22T22:37:10.910+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [GET] /api/v1/rooms/ABC123 
-2026-03-22T22:37:10.916+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.room_code=?
-2026-03-22T22:37:10.940+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:10.945+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RoomResponseDTO(id=d3b39d2b-9a1e-4e95-8e54-69ed901e5228, roomCode=ABC123, hostId=user123, currentVid (truncated)...]
-2026-03-22T22:37:10.948+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [GET] /api/v1/rooms/ABC123  - Status: 200 - Duration: 38ms
-]]></system-out>
-  </testcase>
-  <testcase name="testUpdateRoomVideo" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.026">
-    <system-out><![CDATA[2026-03-22T22:37:10.961+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0
-2026-03-22T22:37:10.963+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    delete 
-    from
-        rooms 
-    where
-        id=?
-2026-03-22T22:37:10.965+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.id=?
-2026-03-22T22:37:10.969+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    insert 
-    into
-        rooms
-        (created_at, current_video_url, host_id, is_active, room_code, id) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2026-03-22T22:37:10.974+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#updateVideo(String, UpdateRoomVideoRequest)
-2026-03-22T22:37:10.974+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [PATCH] /api/v1/rooms/ABC123/video 
-2026-03-22T22:37:10.974+05:30 DEBUG 35268 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UpdateRoomVideoRequest(currentVideoUrl=http://example.com/new.mp4)]
-2026-03-22T22:37:10.974+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.room_code=?
-2026-03-22T22:37:10.982+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    update
-        rooms 
-    set
-        current_video_url=?,
-        host_id=?,
-        is_active=?,
-        room_code=? 
-    where
-        id=?
-2026-03-22T22:37:10.982+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:10.982+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RoomResponseDTO(id=20631543-be5b-4fca-a4c5-74199352bb95, roomCode=ABC123, hostId=user123, currentVid (truncated)...]
-2026-03-22T22:37:10.982+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [PATCH] /api/v1/rooms/ABC123/video  - Status: 200 - Duration: 8ms
-]]></system-out>
-  </testcase>
-  <testcase name="testCreateRoomWithoutHostId" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.071">
-    <system-out><![CDATA[2026-03-22T22:37:11.003+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0
-2026-03-22T22:37:11.005+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    delete 
-    from
-        rooms 
-    where
-        id=?
-2026-03-22T22:37:11.028+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#createRoom(CreateRoomRequest)
-2026-03-22T22:37:11.028+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [POST] /api/v1/rooms 
-2026-03-22T22:37:11.033+05:30 DEBUG 35268 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateRoomRequest(hostId=null, currentVideoUrl=http://example.com/video.mp4)]
-2026-03-22T22:37:11.054+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.nightswatch.roomservice.exception.GlobalExceptionHandler#handleException(Exception, WebRequest)
-2026-03-22T22:37:11.056+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:11.057+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorResponse(timestamp=2026-03-22T17:07:11.056231300Z, status=400, error=Bad Request, message=hostI (truncated)...]
-2026-03-22T22:37:11.058+05:30 DEBUG 35268 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.nightswatch.roomservice.dto.RoomResponseDTO> com.nightswatch.roomservice.controller.RoomController.createRoom(com.nightswatch.roomservice.dto.CreateRoomRequest): [Field error in object 'createRoomRequest' on field 'hostId': rejected value [null]; codes [NotBlank.createRoomRequest.hostId,NotBlank.hostId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createRoomRequest.hostId,hostId]; arguments []; default message [hostId]]; default message [hostId is required]] ]
-2026-03-22T22:37:11.059+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [POST] /api/v1/rooms  - Status: 400 - Duration: 31ms
-]]></system-out>
-  </testcase>
-  <testcase name="testCreateRoom" classname="com.nightswatch.roomservice.controller.RoomControllerIntegrationTest" time="0.047">
-    <system-out><![CDATA[2026-03-22T22:37:11.081+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0
-2026-03-22T22:37:11.087+05:30 DEBUG 35268 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.nightswatch.roomservice.controller.RoomController#createRoom(CreateRoomRequest)
-2026-03-22T22:37:11.087+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [POST] /api/v1/rooms 
-2026-03-22T22:37:11.089+05:30 DEBUG 35268 --- [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreateRoomRequest(hostId=user123, currentVideoUrl=http://example.com/video.mp4)]
-2026-03-22T22:37:11.098+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    select
-        r1_0.id,
-        r1_0.created_at,
-        r1_0.current_video_url,
-        r1_0.host_id,
-        r1_0.is_active,
-        r1_0.room_code 
-    from
-        rooms r1_0 
-    where
-        r1_0.room_code=?
-2026-03-22T22:37:11.108+05:30 DEBUG 35268 --- [           main] org.hibernate.SQL                        : 
-    insert 
-    into
-        rooms
-        (created_at, current_video_url, host_id, is_active, room_code, id) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2026-03-22T22:37:11.111+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-03-22T22:37:11.112+05:30 DEBUG 35268 --- [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RoomResponseDTO(id=d971ea31-7cd2-450e-a028-aeae5f80a58d, roomCode=I9X30Z, hostId=user123, currentVid (truncated)...]
-2026-03-22T22:37:11.113+05:30  INFO 35268 --- [           main] .LoggingConfig$RequestLoggingInterceptor : [POST] /api/v1/rooms  - Status: 200 - Duration: 26ms
+2026-03-22T22:36:52.390+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-03-22T22:36:52.391+05:30 DEBUG 36888 --- [auth-service] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AuthResponse(token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2hpdCIsImVtYWlsIjoicm9oaXRAZXhhbXBsZS5jb20iLCJy (truncated)...]
 ]]></system-out>
   </testcase>
 </testsuite>

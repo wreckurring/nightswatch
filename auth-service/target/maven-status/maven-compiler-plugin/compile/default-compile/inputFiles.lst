@@ -1,0 +1,17 @@
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\dto\RegisterRequest.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\model\ErrorResponse.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\dto\TokenValidationResponse.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\AuthServiceApplication.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\entity\UserAccount.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\dto\TokenValidationRequest.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\service\impl\AuthServiceImpl.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\service\JwtService.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\exception\AuthUnauthorizedException.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\exception\AuthConflictException.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\exception\AuthExceptionHandler.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\controller\AuthController.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\dto\LoginRequest.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\dto\AuthResponse.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\repository\UserAccountRepository.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\config\SecurityConfig.java
+D:\Github-Projects\nightswatch\auth-service\src\main\java\com\nightswatch\authservice\service\AuthService.java
