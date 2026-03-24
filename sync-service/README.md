@@ -31,57 +31,6 @@ A production-ready **Spring Boot microservice** for real-time WebSocket synchron
 | **Utilities**  | Lombok                   |
 | **Testing**    | JUnit 5                  |
 
-## Quick Start
-
-### Installation & Run
-
-```bash
-git clone https://github.com/wreckurring/nightswatch.git
-cd nightswatch
-
-mvn clean install
-mvn spring-boot:run -pl sync-service
-```
-
-**Server starts on:** `http://localhost:8081`
-**WebSocket endpoint:** `ws://localhost:8081/api/ws-sync`
-
-## STOMP Message Flow
-
-```
-Client                          Sync Service                 Broadcast
-  │                                  │                           │
-  ├──────────────────────────────────►                           │
-  │  SEND to /app/room/ABC123/sync   │                           │
-  │  (SyncMessage payload)            │                           │
-  │                                  ├──────────────────────────►│
-  │                                  │  Broadcast to              │
-  │                                  │  /topic/room/ABC123/sync   │
-  │                                  │                           │
-  │◄──────────────────────────────────────────────────────────────┤
-  │  MESSAGE from /topic/.../sync     │   (All subscribers)       │
-  │                                  │                           │
-```
-
-## Configuration
-
-### application.yml (Production)
-
-```yaml
-spring:
-  application:
-    name: sync-service
-
-server:
-  port: 8081
-  servlet:
-    context-path: /api
-
-logging:
-  level:
-    root: INFO
-    com.nightswatch.syncservice: DEBUG
-```
 
 ## Project Structure
 
@@ -135,7 +84,6 @@ This service is **stateless** and can be scaled horizontally:
 - Load balance WebSocket connections across instances
 - Message broker is configurable per deployment
 
-
 ### Architecture Diagram
 
 ```
@@ -150,6 +98,59 @@ Client 4 ──┤                        ├──────► Instance 2 (8
                                   │
                               RabbitMQ
                            (STOMP: 61613)
+```
+
+
+## Quick Start
+
+### Installation & Run
+
+```bash
+git clone https://github.com/wreckurring/nightswatch.git
+cd nightswatch
+
+mvn clean install
+mvn spring-boot:run -pl sync-service
+```
+
+**Server starts on:** `http://localhost:8081`
+**WebSocket endpoint:** `ws://localhost:8081/api/ws-sync`
+
+## STOMP Message Flow
+
+```
+Client                          Sync Service                 Broadcast
+  │                                  │                           │
+  ├──────────────────────────────────►                           │
+  │  SEND to /app/room/ABC123/sync   │                           │
+  │  (SyncMessage payload)            │                           │
+  │                                  ├──────────────────────────►│
+  │                                  │  Broadcast to              │
+  │                                  │  /topic/room/ABC123/sync   │
+  │                                  │                           │
+  │◄──────────────────────────────────────────────────────────────┤
+  │  MESSAGE from /topic/.../sync     │   (All subscribers)       │
+  │                                  │                           │
+```
+
+## Configuration
+
+### application.yml (Production)
+
+```yaml
+spring:
+  application:
+    name: sync-service
+
+server:
+  port: 8081
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    root: INFO
+    com.nightswatch.syncservice: DEBUG
 ```
 
 ## WebSocket API
