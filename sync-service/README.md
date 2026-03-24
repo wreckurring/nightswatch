@@ -152,6 +152,73 @@ Client 4 ──┤                        ├──────► Instance 2 (8
                            (STOMP: 61613)
 ```
 
+## WebSocket API
+
+### Connect to Sync Service
+
+```javascript
+const socket = new SockJS("http://localhost:8081/api/ws-sync");
+const stompClient = Stomp.over(socket);
+
+stompClient.connect({}, function (frame) {
+  console.log("Connected: " + frame.command);
+
+  stompClient.subscribe("/topic/room/ABC123/sync", function (message) {
+    console.log("Sync message: " + message.body);
+  });
+
+  stompClient.subscribe("/topic/room/ABC123/presence", function (message) {
+    console.log("Presence: " + message.body);
+  });
+});
+```
+
+### Endpoint 1: Playback Synchronized
+
+Send playback sync messages to `/app/room/{roomCode}/sync`
+
+**Request (JSON):**
+
+```json
+{
+  "roomCode": "ABC123",
+  "userId": "user456",
+  "action": "PLAY",
+  "videoTimestamp": 45.5
+}
+```
+
+**Broadcast Destination:** `/topic/room/ABC123/sync`
+
+**Actions Enum:**
+
+- `PLAY` — Start video playback
+- `PAUSE` — Pause video playback
+- `SEEK` — Jump to specific timestamp
+- `BUFFERING` — Indicate buffering state
+
+### Endpoint 2: User Presence
+
+Send presence messages to `/app/room/{roomCode}/presence`
+
+**Request (JSON):**
+
+```json
+{
+  "roomCode": "ABC123",
+  "userId": "user456",
+  "type": "JOINED"
+}
+```
+
+**Broadcast Destination:** `/topic/room/ABC123/presence`
+
+**Type Enum:**
+
+- `JOINED` — User entered the room
+- `LEFT` — User left the room
+
+
 ## License
 
 MIT License
