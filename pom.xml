@@ -38,6 +38,7 @@
     <modules>
         <module>api-gateway</module>
         <module>auth-service</module>
+        <module>media-service</module>
         <module>room-service</module>
         <module>sync-service</module>
     </modules>
