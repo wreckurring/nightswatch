@@ -40,6 +40,16 @@ Owns live playback synchronization and room presence over WebSocket/STOMP.
 
 [View Sync Service Docs](./sync-service/README.md)
 
+### 5. Media Service (`media-service`)
+
+URL analysis, provider detection, and media asset persistence.
+
+- Port: `8084`
+- Technology: Spring Boot, JPA, PostgreSQL
+- Supports: YouTube, Vimeo, direct video files (`.mp4`, `.webm`, etc.)
+
+[View Media Service Docs](./media-service/README.md)
+
 ## Recommended Boundaries
 
 The current split should stay narrow:
@@ -48,11 +58,11 @@ The current split should stay narrow:
 - `auth-service`: authentication, credential validation, JWT lifecycle
 - `room-service`: room CRUD, room settings, active status, persistence, cache
 - `sync-service`: playback events, presence updates, WebSocket session traffic
+- `media-service`: URL analysis, provider normalization, media asset registry
 
 As NightsWatch grows, add new concerns as separate services instead of expanding the existing ones:
 
 - `user-service`: profiles, preferences, social graph
-- `media-service`: provider integrations, link validation, metadata extraction
 - `notification-service`: invites, reminders, async event delivery
 - `analytics-service`: telemetry, product metrics, reporting
 
@@ -70,6 +80,7 @@ Run each service in a separate terminal:
 mvn spring-boot:run -pl auth-service
 mvn spring-boot:run -pl room-service
 mvn spring-boot:run -pl sync-service
+mvn spring-boot:run -pl media-service
 mvn spring-boot:run -pl api-gateway
 ```
 
@@ -83,12 +94,14 @@ Use the gateway as the main client entry point:
 - Room Swagger UI: `http://localhost:8082/api-docs.html`
 - Room OpenAPI: `http://localhost:8082/v3/api-docs`
 - Sync SockJS and WebSocket: `http://localhost:8082/api/ws-sync`
+- Media API: `http://localhost:8082/api/v1/media`
 
 Direct service ports still work for local development:
 
 - Auth Service: `http://localhost:8083`
 - Room Service: `http://localhost:8080`
 - Sync Service: `http://localhost:8081`
+- Media Service: `http://localhost:8084`
 
 ## Architecture
 
@@ -97,23 +110,24 @@ Direct service ports still work for local development:
 | Client (Browser)  | -----> | API Gateway (8082)  |
 +-------------------+        +----------+----------+
                                          |
-                        +----------------+----------------+
-                        |                |                |
-                        v                v                v
-                +---------------+ +---------------+ +---------------+
-                | Auth Service  | | Room Service  | | Sync Service  |
-                |     8083      | |     8080      | |     8081      |
-                | JWT + Users   | | REST + DB     | | WS + STOMP    |
-                +---------------+ +---------------+ +---------------+
+                        +----------------+----------------+------------------+
+                        |                |                |                  |
+                        v                v                v                  v
+                +---------------+ +---------------+ +---------------+ +---------------+
+                | Auth Service  | | Room Service  | | Sync Service  | | Media Service |
+                |     8083      | |     8080      | |     8081      | |     8084      |
+                | JWT + Users   | | REST + DB     | | WS + STOMP    | | URLs + Assets |
+                +---------------+ +---------------+ +---------------+ +---------------+
 ```
 
 ## Example Flow
 
 1. A client authenticates through `POST /api/v1/auth/login` on the gateway and receives a JWT.
-2. A client creates a room through `POST /api/v1/rooms` on the gateway.
-3. The gateway forwards auth requests to `auth-service` and room requests to `room-service`.
-4. Clients connect to `/api/ws-sync` on the gateway for live sync traffic.
-5. The gateway forwards SockJS and WebSocket traffic to `sync-service`.
+2. A client analyzes a video URL through `POST /api/v1/media/analyze` to validate and normalize it.
+3. A client creates a room through `POST /api/v1/rooms` on the gateway.
+4. The gateway forwards auth requests to `auth-service`, room requests to `room-service`, and media requests to `media-service`.
+5. Clients connect to `/api/ws-sync` on the gateway for live sync traffic.
+6. The gateway forwards SockJS and WebSocket traffic to `sync-service`.
 
 ## Monorepo Structure
 
@@ -132,6 +146,10 @@ nightswatch/
 |   |-- pom.xml
 |   `-- README.md
 |-- sync-service/
+|   |-- src/
+|   |-- pom.xml
+|   `-- README.md
+|-- media-service/
 |   |-- src/
 |   |-- pom.xml
 |   `-- README.md
