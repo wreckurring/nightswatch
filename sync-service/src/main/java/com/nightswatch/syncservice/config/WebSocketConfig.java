@@ -1,5 +1,6 @@
 package com.nightswatch.syncservice.config;
 
+import com.nightswatch.syncservice.interceptor.AuthHandshakeInterceptor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +15,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @Slf4j
 @RequiredArgsConstructor
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+
+    private final AuthHandshakeInterceptor authHandshakeInterceptor;
 
     @Value("${sync-service.broker.type:simple}")
     private String brokerType;
@@ -52,6 +55,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws-sync")
                 .setAllowedOriginPatterns("*")
+                .addInterceptors(authHandshakeInterceptor)
                 .withSockJS();
     }
 }

@@ -1,0 +1,3 @@
+CREATE DATABASE authdb;
+CREATE DATABASE roomdb;
+CREATE DATABASE mediadb;

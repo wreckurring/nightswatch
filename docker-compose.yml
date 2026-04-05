@@ -1,0 +1,101 @@
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  auth-service:
+    build:
+      context: ./auth-service
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/authdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  room-service:
+    build:
+      context: ./room-service
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/roomdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PORT: 6379
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  sync-service:
+    build:
+      context: ./sync-service
+    ports:
+      - "8081:8081"
+    environment:
+      SERVICES_ROOM-SERVICE_URI: http://room-service:8080
+    depends_on:
+      - room-service
+
+  media-service:
+    build:
+      context: ./media-service
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mediadb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "8082:8082"
+    environment:
+      SERVICES_AUTH-SERVICE_URI: http://auth-service:8083
+      SERVICES_ROOM-SERVICE_URI: http://room-service:8080
+      SERVICES_SYNC-SERVICE_HTTP-URI: http://sync-service:8081
+      SERVICES_SYNC-SERVICE_WS-URI: ws://sync-service:8081
+      SERVICES_MEDIA-SERVICE_URI: http://media-service:8084
+    depends_on:
+      - auth-service
+      - room-service
+      - sync-service
+      - media-service
+
+volumes:
+  postgres-data:
