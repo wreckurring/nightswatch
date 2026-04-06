@@ -3,6 +3,8 @@ package com.nightswatch.syncservice.client;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.Set;
+
 @Data
 public class RoomResponse {
 
@@ -10,4 +12,6 @@ public class RoomResponse {
 
     @JsonProperty("isActive")
     private boolean active;
+
+    private Set<String> streamPermissions;
 }

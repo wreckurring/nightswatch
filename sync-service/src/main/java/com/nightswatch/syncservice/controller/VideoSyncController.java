@@ -40,8 +40,10 @@ public class VideoSyncController {
 
         if (HOST_ONLY_ACTIONS.contains(message.getAction())) {
             String hostId = roomClient.getHostId(roomCode);
-            if (!sender.equals(hostId)) {
-                log.debug("Dropping {} from {} in room {} — sender is not the host", message.getAction(), sender, roomCode);
+            boolean isHost = sender.equals(hostId);
+            boolean hasPermission = !isHost && roomClient.getStreamPermissions(roomCode).contains(sender);
+            if (!isHost && !hasPermission) {
+                log.debug("Dropping {} from {} in room {} — not host or permitted", message.getAction(), sender, roomCode);
                 return;
             }
         }

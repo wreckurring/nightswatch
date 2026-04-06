@@ -51,4 +51,22 @@ public class RoomController {
         roomService.deactivateRoom(roomCode);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/{roomCode}/stream-permission/{userId}")
+    @Operation(summary = "Grant stream permission", description = "Allows a member to control playback (host only)")
+    public ResponseEntity<RoomResponseDTO> grantStreamPermission(
+            @PathVariable String roomCode,
+            @PathVariable String userId) {
+        RoomResponseDTO response = roomService.grantStreamPermission(roomCode, userId);
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{roomCode}/stream-permission/{userId}")
+    @Operation(summary = "Revoke stream permission", description = "Removes a member's playback control permission (host only)")
+    public ResponseEntity<RoomResponseDTO> revokeStreamPermission(
+            @PathVariable String roomCode,
+            @PathVariable String userId) {
+        RoomResponseDTO response = roomService.revokeStreamPermission(roomCode, userId);
+        return ResponseEntity.ok(response);
+    }
 }

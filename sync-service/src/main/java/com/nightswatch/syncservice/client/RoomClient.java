@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientException;
 
+import java.util.Collections;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -23,6 +25,21 @@ public class RoomClient {
 
     public String getHostId(String roomCode) {
         return hostCache.computeIfAbsent(roomCode, this::fetchHostId);
+    }
+
+    public Set<String> getStreamPermissions(String roomCode) {
+        try {
+            RoomResponse room = restClient.get()
+                    .uri("/api/v1/rooms/{code}", roomCode)
+                    .retrieve()
+                    .body(RoomResponse.class);
+            if (room != null && room.getStreamPermissions() != null) {
+                return room.getStreamPermissions();
+            }
+        } catch (RestClientException e) {
+            log.warn("Failed to fetch stream permissions for room {}: {}", roomCode, e.getMessage());
+        }
+        return Collections.emptySet();
     }
 
     private String fetchHostId(String roomCode) {

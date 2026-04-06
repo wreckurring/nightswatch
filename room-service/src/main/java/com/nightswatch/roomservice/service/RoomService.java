@@ -8,4 +8,6 @@ public interface RoomService {
     RoomResponseDTO getRoomByCode(String roomCode);
     RoomResponseDTO updateRoomVideo(String roomCode, String currentVideoUrl);
     void deactivateRoom(String roomCode);
+    RoomResponseDTO grantStreamPermission(String roomCode, String userId);
+    RoomResponseDTO revokeStreamPermission(String roomCode, String userId);
 }

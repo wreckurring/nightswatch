@@ -5,6 +5,8 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -29,6 +31,11 @@ public class Room {
     private String hostId;
 
     private String currentVideoUrl;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "room_stream_permissions", joinColumns = @JoinColumn(name = "room_id"))
+    @Column(name = "user_id")
+    private Set<String> streamPermissions = new HashSet<>();
 
     @Column(nullable = false)
     private boolean isActive = true;

@@ -18,6 +18,7 @@ import java.security.SecureRandom;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -107,6 +108,34 @@ public class RoomServiceImpl implements RoomService {
         Counter.builder("room.deactivated").register(meterRegistry).increment();
     }
 
+    @Override
+    @Transactional
+    public RoomResponseDTO grantStreamPermission(String roomCode, String userId) {
+        Room room = roomRepository.findByRoomCode(roomCode)
+                .orElseThrow(() -> new RoomNotFoundException(roomCode));
+
+        room.getStreamPermissions().add(userId);
+        room = roomRepository.save(room);
+
+        RoomResponseDTO response = toDto(room);
+        roomCacheService.put(response);
+        return response;
+    }
+
+    @Override
+    @Transactional
+    public RoomResponseDTO revokeStreamPermission(String roomCode, String userId) {
+        Room room = roomRepository.findByRoomCode(roomCode)
+                .orElseThrow(() -> new RoomNotFoundException(roomCode));
+
+        room.getStreamPermissions().remove(userId);
+        room = roomRepository.save(room);
+
+        RoomResponseDTO response = toDto(room);
+        roomCacheService.put(response);
+        return response;
+    }
+
     private String generateUniqueRoomCode() {
         for (int attempt = 0; attempt < MAX_ROOM_CODE_ATTEMPTS; attempt++) {
             String candidate = generateRoomCode();
@@ -133,6 +162,7 @@ public class RoomServiceImpl implements RoomService {
                 .hostId(room.getHostId())
                 .currentVideoUrl(room.getCurrentVideoUrl())
                 .isActive(room.isActive())
+                .streamPermissions(Set.copyOf(room.getStreamPermissions()))
                 .createdAt(room.getCreatedAt())
                 .build();
     }

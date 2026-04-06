@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -23,6 +24,8 @@ public class RoomResponseDTO {
     private String currentVideoUrl;
 
     private boolean isActive;
+
+    private Set<String> streamPermissions;
 
     private Instant createdAt;
 }
