@@ -32,11 +32,13 @@ public class Room {
 
     private String currentVideoUrl;
 
+    @Builder.Default
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "room_stream_permissions", joinColumns = @JoinColumn(name = "room_id"))
     @Column(name = "user_id")
     private Set<String> streamPermissions = new HashSet<>();
 
+    @Builder.Default
     @Column(nullable = false)
     private boolean isActive = true;
 

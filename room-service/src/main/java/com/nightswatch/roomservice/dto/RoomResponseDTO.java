@@ -1,5 +1,6 @@
 package com.nightswatch.roomservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class RoomResponseDTO {
 
     private String currentVideoUrl;
 
+    @JsonProperty("isActive")
     private boolean isActive;
 
     private Set<String> streamPermissions;

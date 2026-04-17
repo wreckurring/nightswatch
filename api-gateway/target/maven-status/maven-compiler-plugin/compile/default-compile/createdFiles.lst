@@ -1,1 +1,2 @@
+com\nightswatch\apigateway\filter\JwtAuthFilter.class
 com\nightswatch\apigateway\ApiGatewayApplication.class

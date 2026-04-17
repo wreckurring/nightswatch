@@ -2,9 +2,9 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/authdb
-    username: postgres
-    password: postgres
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/authdb}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -28,5 +28,5 @@ management:
 
 auth:
   jwt:
-    secret: c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==
+    secret: ${AUTH_JWT_SECRET:c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==}
     expiration-seconds: 3600

@@ -1,3 +1,11 @@
-*/target/
+**/target/
 .idea/
 *.iml
+.claude/
+nightswatch-client/node_modules/
+nightswatch-client/dist/
+nightswatch-client/.env
+
+# Production secrets — never commit
+.env
+certbot/

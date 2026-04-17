@@ -1,1 +1,2 @@
 D:\Github-Projects\nightswatch\api-gateway\src\main\java\com\nightswatch\apigateway\ApiGatewayApplication.java
+D:\Github-Projects\nightswatch\api-gateway\src\main\java\com\nightswatch\apigateway\filter\JwtAuthFilter.java

@@ -4,7 +4,7 @@ services:
     image: postgres:16-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       POSTGRES_DB: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
@@ -35,7 +35,8 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/authdb
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      AUTH_JWT_SECRET: ${AUTH_JWT_SECRET:-c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==}
     depends_on:
       postgres:
         condition: service_healthy
@@ -48,9 +49,9 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/roomdb
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
-      SPRING_REDIS_HOST: redis
-      SPRING_REDIS_PORT: 6379
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
     depends_on:
       postgres:
         condition: service_healthy
@@ -75,7 +76,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mediadb
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     depends_on:
       postgres:
         condition: service_healthy
@@ -91,11 +92,35 @@ services:
       SERVICES_SYNC-SERVICE_HTTP-URI: http://sync-service:8081
       SERVICES_SYNC-SERVICE_WS-URI: ws://sync-service:8081
       SERVICES_MEDIA-SERVICE_URI: http://media-service:8084
+      AUTH_JWT_SECRET: ${AUTH_JWT_SECRET:-c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==}
     depends_on:
       - auth-service
       - room-service
       - sync-service
       - media-service
+
+  nginx:
+    build:
+      context: ./nightswatch-client
+      args:
+        VITE_API_URL: ""
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --quiet; sleep 12h & wait $${!}; done;'"
 
 volumes:
   postgres-data:

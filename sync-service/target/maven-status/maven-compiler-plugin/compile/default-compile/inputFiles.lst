@@ -1,8 +1,11 @@
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\dto\SyncMessage.java
+D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\client\RoomClient.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\dto\SyncAction.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\dto\PresenceMessage.java
+D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\interceptor\AuthHandshakeInterceptor.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\listener\WebSocketEventListener.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\SyncServiceApplication.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\config\WebSocketConfig.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\controller\VideoSyncController.java
+D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\client\RoomResponse.java
 D:\Github-Projects\nightswatch\sync-service\src\main\java\com\nightswatch\syncservice\dto\PresenceType.java

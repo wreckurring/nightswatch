@@ -37,13 +37,7 @@ management:
 
 auth:
   jwt:
-    secret: c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==
+    secret: ${AUTH_JWT_SECRET:c3VwZXItc2VjdXJlLWRldi1zaWduaW5nLWtleS1mb3ItbmlnaHRzd2F0Y2gtYXV0aA==}
 
 gateway:
-  public-paths:
-    - /api/v1/auth/
-    - /actuator/
-    - /v3/api-docs
-    - /auth-docs.html
-    - /api-docs.html
-    - /media-docs.html
+  public-paths: /api/v1/auth/,/actuator/,/v3/api-docs,/auth-docs.html,/api-docs.html,/media-docs.html
